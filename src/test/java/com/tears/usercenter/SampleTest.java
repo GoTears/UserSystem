@@ -1,7 +1,5 @@
 package com.tears.usercenter;
 
-import com.tears.usercenter.mapper.UserMapper;
-import com.tears.usercenter.model.User;
 import jakarta.annotation.Resource;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
