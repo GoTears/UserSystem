@@ -38,7 +38,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
             return -1;
         }
         // 账号不能包含特殊字符
-        return 1;
+        return 0;
 
     }
 }
