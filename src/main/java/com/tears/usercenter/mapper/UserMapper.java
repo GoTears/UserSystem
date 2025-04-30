@@ -1,5 +1,6 @@
 package com.tears.usercenter.mapper;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.tears.usercenter.model.domain.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 */
 public interface UserMapper extends BaseMapper<User> {
 
+    long selectAccount(QueryWrapper<User> queryWarpper);
 }
 
 
