@@ -1,8 +1,8 @@
 package com.tears.usercenter.mapper;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.tears.usercenter.model.domain.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.tears.usercenter.model.domain.User;
+import org.apache.ibatis.annotations.Mapper;
 
 /**
 * @author Taco
@@ -10,9 +10,10 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @createDate 2025-04-27 19:21:32
 * @Entity generator.domain.User
 */
+@Mapper
 public interface UserMapper extends BaseMapper<User> {
 
-    long selectAccount(QueryWrapper<User> queryWarpper);
+
 }
 
 

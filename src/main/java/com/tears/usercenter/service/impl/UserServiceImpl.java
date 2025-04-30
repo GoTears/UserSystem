@@ -6,6 +6,8 @@ import com.tears.usercenter.mapper.UserMapper;
 import com.tears.usercenter.model.domain.User;
 import com.tears.usercenter.service.UserService;
 import jakarta.annotation.Resource;
+import jakarta.servlet.http.HttpServletRequest;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
@@ -20,10 +22,19 @@ import java.util.regex.Pattern;
 * @createDate 2025-04-27 19:21:31
 */
 @Service
+@Slf4j
 public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     implements UserService{
 
+    /**
+     * 混淆密码
+     */
     private static final String SALT = "tears";
+
+    /**
+     * 用户登录状态key
+     */
+    private static final String USER_LOGIN_STATE = "userLoginStatus";
     @Resource
     private UserMapper userMapper;
 
@@ -55,7 +66,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         //账号不能重复
         QueryWrapper<User> queryWarpper = new QueryWrapper<>(); // MyBatis-Plus 的标准类名
         queryWarpper.eq("user_account", userAccount); // 字段名应与数据库表字段名一致
-        long count = userMapper.selectAccount(queryWarpper);
+        long count = userMapper.selectCount(queryWarpper);
         if (count > 0){
             return -1;
         }
@@ -82,6 +93,60 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         this.save(user);
         return user.getId();
     }
+
+    //Login major
+    @Override
+    public User doLogin(String userAccount, String userPassword, HttpServletRequest request) {
+        // 1. 校验
+        if (StringUtils.isAnyBlank(userAccount, userPassword)) {
+            return null;
+        }
+        if (userAccount.length() < 4) {
+            return null;
+        }
+        if (userPassword.length() < 8) {
+            return null;
+        }
+        // 账户不能包含特殊字符
+        String validPattern = "[`~!@#$%^&*()+=|{}':;',\\\\[\\\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]";
+        Matcher matcher = Pattern.compile(validPattern).matcher(userAccount);
+        if (matcher.find()) {
+            return null;
+        }
+        // 加密
+        String encryptPassword = DigestUtils.md5DigestAsHex((SALT + userPassword).getBytes());
+
+        // 查询用户是否存在
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("userAccount", userAccount);
+        queryWrapper.eq("userPassword", encryptPassword);
+        User user = userMapper.selectOne(queryWrapper);
+        if (user == null){
+            log.info("user login failed, userAccount cannot match userPassword");
+            return null;
+        }
+
+        //用户账户信息脱敏
+        User safetyUser = new User();
+        safetyUser.setId(user.getId());
+        safetyUser.setUsername(user.getUsername());
+        safetyUser.setUserAccount(user.getUserAccount());
+        safetyUser.setAvatarUrl(user.getAvatarUrl());
+        safetyUser.setGender(user.getGender());
+        safetyUser.setPhone(user.getPhone());
+        safetyUser.setEmail(user.getEmail());
+        safetyUser.setUserStatus(user.getUserStatus());
+        safetyUser.setCreateTime(user.getCreateTime());
+
+
+        //记录用户登录状态
+        request.getSession().setAttribute(USER_LOGIN_STATE,user);
+        return safetyUser;
+    }
+
+
+
+
 }
 
 
