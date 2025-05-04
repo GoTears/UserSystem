@@ -45,7 +45,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         //查看账户密码等是否为空
         if (StringUtils.isAnyEmpty(userAccount, userPassword, checkPassword)){
             return -1;
-
         }
         //查看账号长度是否小于4
         if (userAccount.length() < 4){
@@ -54,10 +53,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         //查看密码是否小于8
         if (userPassword.length() < 8){
             return -1;
-
-        }
-        if (userAccount.length()<4 ){
-            return -1;
         }
         if(userPassword.length() < 8 || checkPassword.length() < 8){
             return -1;
@@ -65,7 +60,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 
         //账号不能重复
         QueryWrapper<User> queryWarpper = new QueryWrapper<>(); // MyBatis-Plus 的标准类名
-        queryWarpper.eq("user_account", userAccount); // 字段名应与数据库表字段名一致
+        queryWarpper.eq("userAccount", userAccount); // 字段名应与数据库表字段名一致
         long count = userMapper.selectCount(queryWarpper);
         if (count > 0){
             return -1;
