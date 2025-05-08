@@ -1,7 +1,6 @@
 package com.tears.usercenter.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.tears.usercenter.constant.UserConstant;
 import com.tears.usercenter.model.domain.User;
 import com.tears.usercenter.model.domain.request.UserLoginRequest;
 import com.tears.usercenter.model.domain.request.UserRegisterRequest;
@@ -13,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static com.tears.usercenter.constant.UserConstant.ADMIN_ROLE;
 import static com.tears.usercenter.constant.UserConstant.USER_LOGIN_STATE;
@@ -66,7 +66,10 @@ public class UserController {
         if(StringUtils.isNotBlank(username)){
             queryWrapper.like("username",username);
         }
-        return userService.list(queryWrapper);
+//      return userService.list(queryWrapper);
+        //快速脱敏将密码返回为空（若测试要看信息可以将这段代码注释将上面代码释放 Java语法糖写法,后面会优化）
+        List<User> userList = userService.list(queryWrapper);
+        return userList.stream().map(user -> userService.getSafetyUser(user)).collect(Collectors.toList());
     }
 
     /**
@@ -85,9 +88,14 @@ public class UserController {
         return userService.removeById(id);
     }
 
+    /**
+     * 鉴权
+     * @param request
+     * @return
+     */
     public boolean isAdmin(HttpServletRequest request){
         Object userObj = request.getSession().getAttribute(USER_LOGIN_STATE);
         User user = (User) userObj;
-        return user != null && user.getuserRole() == ADMIN_ROLE;
+        return user != null && user.getUserRole() == ADMIN_ROLE;
     }
 }
