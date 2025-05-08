@@ -62,7 +62,7 @@ public class User implements Serializable {
     /**
      * 用户角色 0 - 普用用户 1- 管理猿
      */
-    private Integer role;
+    private Integer userRole;
 
     /**
      * 创建时间
@@ -179,12 +179,12 @@ public class User implements Serializable {
         this.isDelete = isDelete;
     }
 
-    public Integer getRole() {
-        return role;
+    public Integer getuserRole() {
+        return userRole;
     }
 
-    public void setRole(Integer role) {
-        this.role = role;
+    public void setuserRole(Integer userRole) {
+        this.userRole = userRole;
     }
     @Override
     public String toString() {

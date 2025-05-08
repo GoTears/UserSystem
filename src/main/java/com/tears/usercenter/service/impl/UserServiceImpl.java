@@ -2,6 +2,7 @@ package com.tears.usercenter.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.tears.usercenter.constant.UserConstant;
 import com.tears.usercenter.mapper.UserMapper;
 import com.tears.usercenter.model.domain.User;
 import com.tears.usercenter.service.UserService;
@@ -14,6 +15,8 @@ import org.springframework.util.DigestUtils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static com.tears.usercenter.constant.UserConstant.USER_LOGIN_STATE;
 
 /**
  * 用户实现类
@@ -31,10 +34,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
      */
     public static final String SALT = "tears";
 
-    /**
-     * 用户登录状态key
-     */
-    public static final String USER_LOGIN_STATE = "userLoginStatus";
+
     @Resource
     private UserMapper userMapper;
 
@@ -54,6 +54,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         if (userPassword.length() < 8){
             return -1;
         }
+        //检查密码栏的密码长度不能小于8且密码长度不能小于8
         if(userPassword.length() < 8 || checkPassword.length() < 8){
             return -1;
         }
@@ -130,6 +131,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         safetyUser.setGender(user.getGender());
         safetyUser.setPhone(user.getPhone());
         safetyUser.setEmail(user.getEmail());
+        safetyUser.setuserRole(user.getuserRole());
         safetyUser.setUserStatus(user.getUserStatus());
         safetyUser.setCreateTime(user.getCreateTime());
 
@@ -138,8 +140,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         request.getSession().setAttribute(USER_LOGIN_STATE,user);
         return safetyUser;
     }
-
-
 
 
 }

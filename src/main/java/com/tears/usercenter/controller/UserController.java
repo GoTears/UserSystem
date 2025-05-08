@@ -1,6 +1,7 @@
 package com.tears.usercenter.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.tears.usercenter.constant.UserConstant;
 import com.tears.usercenter.model.domain.User;
 import com.tears.usercenter.model.domain.request.UserLoginRequest;
 import com.tears.usercenter.model.domain.request.UserRegisterRequest;
@@ -12,6 +13,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.tears.usercenter.constant.UserConstant.ADMIN_ROLE;
+import static com.tears.usercenter.constant.UserConstant.USER_LOGIN_STATE;
 
 /**
  *
@@ -54,13 +58,10 @@ public class UserController {
 
     @GetMapping("/search")
     public List<User> searchUsers(String username, HttpServletRequest request){
-        //管理猿可查
-        Object userObj = request.getSession().getAttribute(UserService.USER_LOGIN_STATE);
-        User user = (User) userObj;
-        if (user == null || user.getRole() != 1){
+        //管理猿可查(这里偷懒了，正常要在业务层写搜索逻辑)
+        if(!isAdmin(request)){
             return new ArrayList<>();
         }
-
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         if(StringUtils.isNotBlank(username)){
             queryWrapper.like("username",username);
@@ -68,11 +69,25 @@ public class UserController {
         return userService.list(queryWrapper);
     }
 
+    /**
+     * 会触发逻辑删除
+     * @param id
+     * @return
+     */
     @PostMapping("/delete")
-    public boolean deleteUser(@RequestBody long id){
+    public boolean deleteUser(@RequestBody long id, HttpServletRequest request){
+        if (!isAdmin(request)){
+            return false;
+        }
         if (id <= 0){
             return false;
         }
         return userService.removeById(id);
+    }
+
+    public boolean isAdmin(HttpServletRequest request){
+        Object userObj = request.getSession().getAttribute(USER_LOGIN_STATE);
+        User user = (User) userObj;
+        return user != null && user.getuserRole() == ADMIN_ROLE;
     }
 }
