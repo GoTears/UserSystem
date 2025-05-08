@@ -7,7 +7,6 @@ import com.tears.usercenter.model.domain.User;
 import com.tears.usercenter.service.UserService;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
@@ -24,9 +23,12 @@ import static com.tears.usercenter.constant.UserConstant.USER_LOGIN_STATE;
 * @createDate 2025-04-27 19:21:31
 */
 @Service
-@Slf4j
+//@Slf4j
 public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     implements UserService{
+
+    private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(UserServiceImpl.class);
+
 
     /**
      * 混淆密码
