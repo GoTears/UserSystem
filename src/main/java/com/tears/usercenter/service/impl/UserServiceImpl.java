@@ -29,12 +29,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     /**
      * 混淆密码
      */
-    private static final String SALT = "tears";
+    public static final String SALT = "tears";
 
     /**
      * 用户登录状态key
      */
-    private static final String USER_LOGIN_STATE = "userLoginStatus";
+    public static final String USER_LOGIN_STATE = "userLoginStatus";
     @Resource
     private UserMapper userMapper;
 
