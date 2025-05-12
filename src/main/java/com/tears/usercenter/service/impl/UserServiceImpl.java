@@ -2,10 +2,6 @@ package com.tears.usercenter.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-<<<<<<< HEAD
-import com.sun.org.apache.xpath.internal.operations.String;
-=======
->>>>>>> 3d2f8a9a4fbb71014872222e53ad7ca002692c3f
 import com.tears.usercenter.mapper.UserMapper;
 import com.tears.usercenter.model.domain.User;
 import com.tears.usercenter.service.UserService;
@@ -140,19 +136,19 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 
     @Override
     @Transactional
-    public User updateUser(Long id, String username, String newEmail, String newPhone){
+    public User updateUser(Long id, String username, String newEmail, String newPhone) {
         // 1. 校验用户是否存在
         User existingUser = this.getById(id);
-        if (existingUser == null){
-           return null;
-       }
+        if (existingUser == null) {
+            return null;
+        }
 
-       //校验用户名是否重复
+        //校验用户名是否重复
         QueryWrapper<User> queryWarpper = new QueryWrapper<>(); // MyBatis-Plus 的标准类名
         queryWarpper.eq("username", username); // 字段名应与数据库表字段名一致
         queryWarpper.ne("id", id);
         long count = userMapper.selectCount(queryWarpper);
-        if (count > 0){
+        if (count > 0) {
             return null;
         }
 
@@ -169,7 +165,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 
         this.updateById(existingUser);
         return existingUser;
-
+    }
     /**
      * 用户脱敏（单独写一个方法）
      * @param originUser

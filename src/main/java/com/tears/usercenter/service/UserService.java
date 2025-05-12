@@ -1,6 +1,4 @@
 package com.tears.usercenter.service;
-
-import com.sun.org.apache.xpath.internal.operations.String;
 import com.tears.usercenter.model.domain.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 import jakarta.servlet.http.HttpServletRequest;
