@@ -60,11 +60,6 @@ public class User implements Serializable {
     private Integer userStatus;
 
     /**
-     * 用户角色 0 - 普用用户 1- 管理猿
-     */
-    private Integer userRole;
-
-    /**
      * 创建时间
      */
     private Date createTime;
@@ -79,6 +74,11 @@ public class User implements Serializable {
      */
     @TableLogic
     private Integer isDelete;
+
+    /**
+     * 用户角色 0 - 普通用户 1 - 管理员
+     */
+    private Integer userRole;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
@@ -179,28 +179,11 @@ public class User implements Serializable {
         this.isDelete = isDelete;
     }
 
-    public Integer getuserRole() {
+    public Integer getUserRole() {
         return userRole;
     }
 
-    public void setuserRole(Integer userRole) {
+    public void setUserRole(Integer userRole) {
         this.userRole = userRole;
-    }
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", userAccount='" + userAccount + '\'' +
-                ", avatarUrl='" + avatarUrl + '\'' +
-                ", gender=" + gender +
-                ", userPassword='" + userPassword + '\'' +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", userStatus=" + userStatus +
-                ", createTime=" + createTime +
-                ", updateTime=" + updateTime +
-                ", isDelete=" + isDelete +
-                '}';
     }
 }

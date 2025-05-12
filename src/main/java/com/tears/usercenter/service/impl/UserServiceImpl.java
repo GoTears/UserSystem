@@ -2,13 +2,15 @@ package com.tears.usercenter.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+<<<<<<< HEAD
 import com.sun.org.apache.xpath.internal.operations.String;
+=======
+>>>>>>> 3d2f8a9a4fbb71014872222e53ad7ca002692c3f
 import com.tears.usercenter.mapper.UserMapper;
 import com.tears.usercenter.model.domain.User;
 import com.tears.usercenter.service.UserService;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,9 +28,12 @@ import static com.tears.usercenter.constant.UserConstant.USER_LOGIN_STATE;
 * @createDate 2025-04-27 19:21:31
 */
 @Service
-@Slf4j
+//@Slf4j
 public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     implements UserService{
+
+    private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(UserServiceImpl.class);
+
 
     /**
      * 混淆密码
@@ -118,29 +123,20 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         queryWrapper.eq("userAccount", userAccount);
         queryWrapper.eq("userPassword", encryptPassword);
         User user = userMapper.selectOne(queryWrapper);
+        //用户不存在
         if (user == null){
-//            log.info("user login failed, userAccount cannot match userPassword");
+            log.info("user login failed, userAccount cannot match userPassword");
             return null;
         }
 
         //用户账户信息脱敏
-        User safetyUser = new User();
-        safetyUser.setId(user.getId());
-        safetyUser.setUsername(user.getUsername());
-        safetyUser.setUserAccount(user.getUserAccount());
-        safetyUser.setAvatarUrl(user.getAvatarUrl());
-        safetyUser.setGender(user.getGender());
-        safetyUser.setPhone(user.getPhone());
-        safetyUser.setEmail(user.getEmail());
-        safetyUser.setuserRole(user.getuserRole());
-        safetyUser.setUserStatus(user.getUserStatus());
-        safetyUser.setCreateTime(user.getCreateTime());
-
+       User safetyUser = getSafetyUser(user);
 
         //记录用户登录状态
         request.getSession().setAttribute(USER_LOGIN_STATE,user);
         return safetyUser;
     }
+
 
     @Override
     @Transactional
@@ -173,6 +169,27 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 
         this.updateById(existingUser);
         return existingUser;
+
+    /**
+     * 用户脱敏（单独写一个方法）
+     * @param originUser
+     * @return
+     */
+    @Override
+    public User getSafetyUser(User originUser){
+        User safetyUser = new User();
+        safetyUser.setId(originUser.getId());
+        safetyUser.setUsername(originUser.getUsername());
+        safetyUser.setUserAccount(originUser.getUserAccount());
+        safetyUser.setAvatarUrl(originUser.getAvatarUrl());
+        safetyUser.setGender(originUser.getGender());
+        safetyUser.setPhone(originUser.getPhone());
+        safetyUser.setEmail(originUser.getEmail());
+        safetyUser.setUserRole(originUser.getUserRole());
+        safetyUser.setUserStatus(originUser.getUserStatus());
+        safetyUser.setCreateTime(originUser.getCreateTime());
+        return safetyUser;
+
     }
 
 }

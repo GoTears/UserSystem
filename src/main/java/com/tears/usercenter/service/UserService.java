@@ -34,6 +34,21 @@ public interface UserService extends IService<User> {
      */
     User userLogin(String userAccount, String userPassword, HttpServletRequest request);
 
+    /**
+     * 用户脱敏
+     * @param originUser
+     * @return
+     */
+    User getSafetyUser(User originUser);
+
+    /**
+     * 更新用户
+     * @param id
+     * @param username
+     * @param newEmail
+     * @param newPhone
+     * @return
+     */
     @Transactional
     User updateUser(Long id, String username, String newEmail, String newPhone);
 }
