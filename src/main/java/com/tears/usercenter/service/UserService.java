@@ -1,8 +1,10 @@
 package com.tears.usercenter.service;
 
+import com.sun.org.apache.xpath.internal.operations.String;
 import com.tears.usercenter.model.domain.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @author Taco
@@ -31,4 +33,7 @@ public interface UserService extends IService<User> {
      * @return 脱敏信息
      */
     User userLogin(String userAccount, String userPassword, HttpServletRequest request);
+
+    @Transactional
+    User updateUser(Long id, String username, String newEmail, String newPhone);
 }

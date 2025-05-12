@@ -90,4 +90,13 @@ public class UserController {
         User user = (User) userObj;
         return user != null && user.getuserRole() == ADMIN_ROLE;
     }
+
+    @PostMapping("/update")
+    public User updateUser(@RequestParam Long id,
+                           @RequestParam(required = false) String username,
+                           @RequestParam(required = false) String newEmail,
+                           @RequestParam(required = false) String newPhone){
+        User updatingUser = userService.updateUser(id, username, newEmail, newPhone);
+        return userService.updateUser();
+    }
 }

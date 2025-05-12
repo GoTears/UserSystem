@@ -2,7 +2,7 @@ package com.tears.usercenter.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.tears.usercenter.constant.UserConstant;
+import com.sun.org.apache.xpath.internal.operations.String;
 import com.tears.usercenter.mapper.UserMapper;
 import com.tears.usercenter.model.domain.User;
 import com.tears.usercenter.service.UserService;
@@ -11,6 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 
 import java.util.regex.Matcher;
@@ -141,6 +142,38 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         return safetyUser;
     }
 
+    @Override
+    @Transactional
+    public User updateUser(Long id, String username, String newEmail, String newPhone){
+        // 1. 校验用户是否存在
+        User existingUser = this.getById(id);
+        if (existingUser == null){
+           return null;
+       }
+
+       //校验用户名是否重复
+        QueryWrapper<User> queryWarpper = new QueryWrapper<>(); // MyBatis-Plus 的标准类名
+        queryWarpper.eq("username", username); // 字段名应与数据库表字段名一致
+        queryWarpper.ne("id", id);
+        long count = userMapper.selectCount(queryWarpper);
+        if (count > 0){
+            return null;
+        }
+
+        // 3. 合并字段（避免 null 覆盖）
+        if (newEmail != null) {
+            existingUser.setEmail(newEmail);
+        }
+        if (newPhone != null) {
+            existingUser.setPhone(newPhone);
+        }
+        if (username != null) {
+            existingUser.setUsername(username);
+        }
+
+        this.updateById(existingUser);
+        return existingUser;
+    }
 
 }
 
