@@ -21,5 +21,32 @@ public class ResultUtils {
         return new BaseResponse<>(errorCode);
     }
 
+    /**
+     * 失败
+     *
+     * @param errorCode
+     * @return
+     */
+    public static BaseResponse error(ErrorCode errorCode, String message, String description) {
+        return new BaseResponse(errorCode.getCode(), null, message, description);
+    }
 
+    /**
+     * 失败
+     *
+     * @param errorCode
+     * @return
+     */
+    public static BaseResponse error(int errorCode, String message, String description) {
+        return new BaseResponse(errorCode, null, message, description);
+    }
+    /**
+     * 失败
+     *
+     * @param errorCode
+     * @return
+     */
+    public static BaseResponse error(ErrorCode errorCode, String description) {
+        return new BaseResponse(errorCode.getCode(), errorCode.getMessage(), description);
+    }
 }

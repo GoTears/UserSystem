@@ -2,6 +2,8 @@ package com.tears.usercenter.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.tears.usercenter.common.ErrorCode;
+import com.tears.usercenter.exception.BusinessException;
 import com.tears.usercenter.mapper.UserMapper;
 import com.tears.usercenter.model.domain.User;
 import com.tears.usercenter.service.UserService;
@@ -46,19 +48,20 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 
         //查看账户密码等是否为空
         if (StringUtils.isAnyEmpty(userAccount, userPassword, checkPassword)){
-            return -1;
+            throw new BusinessException(ErrorCode.NULL_ERROR, "参数为空");
         }
         //查看账号长度是否小于4
         if (userAccount.length() < 4){
-            return -1;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "用户账号过短");
         }
         //查看密码是否小于8
-        if (userPassword.length() < 8){
-            return -1;
-        }
+//        if (userPassword.length() < 8){
+//            throw new BusinessException(ErrorCode.NULL_ERROR, "用户密码过短");
+//        }
+
         //检查密码栏的密码长度不能小于8且密码长度不能小于8
         if(userPassword.length() < 8 || checkPassword.length() < 8){
-            return -1;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "用户密码过短");
         }
 
         //账号不能重复
@@ -66,19 +69,21 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         queryWarpper.eq("userAccount", userAccount); // 字段名应与数据库表字段名一致
         long count = userMapper.selectCount(queryWarpper);
         if (count > 0){
-            return -1;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "账号不能重复");
         }
 
         // 账户不能包含特殊字符
         String validPattern = "[`~!@#$%^&*()+=|{}':;',\\\\[\\\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]";
         Matcher matcher = Pattern.compile(validPattern).matcher(userAccount);
         if (matcher.find()) {
-            return -1;
+//            return -1;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "账户不能包含特殊字符");
         }
 
         //密码和校验密码相同
         if (!userPassword.equals(checkPassword)) {
-            return -1;
+//            return -1;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "密码和校验密码相同");
         }
 
         //密码加密
@@ -97,19 +102,20 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     public User userLogin(String userAccount, String userPassword, HttpServletRequest request) {
         // 1. 校验
         if (StringUtils.isAnyBlank(userAccount, userPassword)) {
-            return null;
+//            return null;
+            throw new BusinessException(ErrorCode.NULL_ERROR, "账号或密码为空");
         }
         if (userAccount.length() < 4) {
-            return null;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "用户账号过短");
         }
         if (userPassword.length() < 8) {
-            return null;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "用户密码过短");
         }
         // 账户不能包含特殊字符
         String validPattern = "[`~!@#$%^&*()+=|{}':;',\\\\[\\\\].<>/?~！@#￥%……&*（）——+|{}【】‘；：”“’。，、？]";
         Matcher matcher = Pattern.compile(validPattern).matcher(userAccount);
         if (matcher.find()) {
-            return null;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "账户不能包含特殊字符");
         }
         // 加密
         String encryptPassword = DigestUtils.md5DigestAsHex((SALT + userPassword).getBytes());
@@ -122,7 +128,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         //用户不存在
         if (user == null){
             log.info("user login failed, userAccount cannot match userPassword");
-            return null;
+            throw new BusinessException(ErrorCode.NULL_ERROR, "用户不存在");
         }
 
         //用户账户信息脱敏
@@ -140,7 +146,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         // 1. 校验用户是否存在
         User existingUser = this.getById(id);
         if (existingUser == null) {
-            return null;
+//            return null;
+            throw new BusinessException(ErrorCode.NULL_ERROR, "用户不存在");
         }
 
         //校验用户名是否重复
@@ -149,7 +156,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         queryWarpper.ne("id", id);
         long count = userMapper.selectCount(queryWarpper);
         if (count > 0) {
-            return null;
+//            return null;
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "用户名重复");
         }
 
         // 3. 合并字段（避免 null 覆盖）

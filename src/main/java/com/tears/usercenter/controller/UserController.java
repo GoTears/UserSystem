@@ -1,6 +1,10 @@
 package com.tears.usercenter.controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.tears.usercenter.common.BaseResponse;
+import com.tears.usercenter.common.ErrorCode;
+import com.tears.usercenter.common.ResultUtils;
+import com.tears.usercenter.exception.BusinessException;
 import com.tears.usercenter.model.domain.User;
 import com.tears.usercenter.model.domain.request.UserLoginRequest;
 import com.tears.usercenter.model.domain.request.UserRegisterRequest;
@@ -30,21 +34,24 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/register")
-    public Long userRegister(@RequestBody UserRegisterRequest userRegisterRequest){
+    public BaseResponse<Long> userRegister(@RequestBody UserRegisterRequest userRegisterRequest){
         if (userRegisterRequest == null){
-            return null;
+//            return ResultUtils.error(ErrorCode.NULL_ERROR);
+            throw new BusinessException(ErrorCode.NULL_ERROR, "注册内容不能为空");
         }
         String userAccount = userRegisterRequest.getUserAccount();
         String userPassword = userRegisterRequest.getUserPassword();
         String checkPassword = userRegisterRequest.getCheckPassword();
         if (StringUtils.isAnyBlank()){
-            return null;
+//            return null;
+            throw new BusinessException(ErrorCode.NULL_ERROR, "注册内容不能为空");
         }
-        return userService.userResister(userAccount, userPassword, checkPassword);
+        long userResister = userService.userResister(userAccount, userPassword, checkPassword);
+        return ResultUtils.success(userResister);
     }
 
     @PostMapping("/login")
-    public User userLogin(@RequestBody UserLoginRequest userLoginRequest, HttpServletRequest request){
+    public BaseResponse<User> userLogin(@RequestBody UserLoginRequest userLoginRequest, HttpServletRequest request){
         if (userLoginRequest == null){
             return null;
         }
@@ -53,14 +60,16 @@ public class UserController {
         if (StringUtils.isAnyBlank()){
             return null;
         }
-        return userService.userLogin(userAccount,userPassword,request);
+        User login = userService.userLogin(userAccount, userPassword, request);
+        return ResultUtils.success(login);
     }
 
     @GetMapping("/search")
-    public List<User> searchUsers(String username, HttpServletRequest request){
+    public BaseResponse<List<User>> searchUsers(String username, HttpServletRequest request){
         //管理猿可查(这里偷懒了，正常要在业务层写搜索逻辑)
         if(!isAdmin(request)){
-            return new ArrayList<>();
+//            return new ArrayList<>();
+            throw new BusinessException(ErrorCode.NO_AUTH, "缺少管理员权限");
         }
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         if(StringUtils.isNotBlank(username)){
@@ -69,7 +78,8 @@ public class UserController {
 //      return userService.list(queryWrapper);
         //快速脱敏将密码返回为空（若测试要看信息可以将这段代码注释将上面代码释放 Java语法糖写法,后面会优化）
         List<User> userList = userService.list(queryWrapper);
-        return userList.stream().map(user -> userService.getSafetyUser(user)).collect(Collectors.toList());
+        List<User> list = userList.stream().map(user -> userService.getSafetyUser(user)).collect(Collectors.toList());
+        return ResultUtils.success(list);
     }
 
     /**
