@@ -53,12 +53,14 @@ public class UserController {
     @PostMapping("/login")
     public BaseResponse<User> userLogin(@RequestBody UserLoginRequest userLoginRequest, HttpServletRequest request){
         if (userLoginRequest == null){
-            return null;
+//            return null;
+            throw new BusinessException(ErrorCode.NULL_ERROR, "账号或密码为空");
         }
         String userAccount = userLoginRequest.getUserAccount();
         String userPassword = userLoginRequest.getUserPassword();
         if (StringUtils.isAnyBlank()){
-            return null;
+//            return null;
+            throw new BusinessException(ErrorCode.NULL_ERROR, "账号或密码为空");
         }
         User login = userService.userLogin(userAccount, userPassword, request);
         return ResultUtils.success(login);
@@ -91,12 +93,14 @@ public class UserController {
      * @return
      */
     @PostMapping("/update")
-    public User updateUser(@RequestParam Long id,
+    public BaseResponse<User> updateUser(@RequestParam Long id,
                            @RequestParam(required = false) String username,
                            @RequestParam(required = false) String newEmail,
                            @RequestParam(required = false) String newPhone){
 //        User updatingUser = userService.updateUser(id, username, newEmail, newPhone);
-        return userService.updateUser(id, username, newEmail, newPhone);
+//        return userService.updateUser(id, username, newEmail, newPhone);
+        User updateUser = userService.updateUser(id, username, newEmail, newPhone);
+        return ResultUtils.success(updateUser);
     }
 
     /**
@@ -105,14 +109,18 @@ public class UserController {
      * @return
      */
     @PostMapping("/delete")
-    public boolean deleteUser(@RequestBody long id, HttpServletRequest request){
+    public BaseResponse<Boolean> deleteUser(@RequestBody long id, HttpServletRequest request){
         if (!isAdmin(request)){
-            return false;
+//            return false;
+            throw new BusinessException(ErrorCode.NO_AUTH, "缺少管理员权限");
         }
         if (id <= 0){
-            return false;
+//            return false;
+            throw new BusinessException(ErrorCode.NULL_ERROR, "删除数据不存在");
         }
-        return userService.removeById(id);
+//        return userService.removeById(id);
+        boolean removeById = userService.removeById(id);
+        return ResultUtils.success(removeById);
     }
 
     /**
