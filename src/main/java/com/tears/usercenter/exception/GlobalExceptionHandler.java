@@ -3,18 +3,18 @@ package com.tears.usercenter.exception;
 import com.tears.usercenter.common.BaseResponse;
 import com.tears.usercenter.common.ErrorCode;
 import com.tears.usercenter.common.ResultUtils;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 
 //集中处理
 @RestControllerAdvice
-@Slf4j
+//@Slf4j
 public class GlobalExceptionHandler {
 
-    //针对什么异常做什么处理
+    private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
+    //针对什么异常做什么处理
     @ExceptionHandler(BusinessException.class)
     public BaseResponse businessExceptionHandler(BusinessException e){
         log.error("businessException: " + e.getMessage(), e);

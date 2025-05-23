@@ -14,7 +14,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -122,6 +121,35 @@ public class UserController {
         boolean removeById = userService.removeById(id);
         return ResultUtils.success(removeById);
     }
+
+    /**
+     * 用户注销
+     * @param request
+     * @return
+     */
+    @PostMapping("logout")
+    public BaseResponse<Boolean> userLogout(HttpServletRequest request){
+        if (request == null) {
+            throw new BusinessException(ErrorCode.PARAMS_ERROR);
+        }
+        boolean userLogout = userService.userLogout(request);
+        return ResultUtils.success(userLogout);
+    }
+
+    @GetMapping("getUser")
+    public BaseResponse<User> getCurrentUser(HttpServletRequest request){
+        Object userObj = request.getSession().getAttribute(USER_LOGIN_STATE);
+        User currentUser = (User) userObj;
+        if (currentUser == null) {
+            throw new BusinessException(ErrorCode.NOT_LOGIN);
+        }
+        long userId = currentUser.getId();
+        // TODO 校验用户是否合法
+        User user = userService.getById(userId);
+        User safetyUser = userService.getSafetyUser(user);
+        return ResultUtils.success(safetyUser);
+    }
+
 
     /**
      * 鉴权

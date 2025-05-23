@@ -3,13 +3,13 @@ package com.tears.usercenter.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.tears.usercenter.common.ErrorCode;
-import com.tears.usercenter.common.ResultUtils;
 import com.tears.usercenter.exception.BusinessException;
 import com.tears.usercenter.mapper.UserMapper;
 import com.tears.usercenter.model.domain.User;
 import com.tears.usercenter.service.UserService;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -178,13 +178,20 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
 
     @Override
     public boolean userLogout(HttpServletRequest request){
+        /*
         try {
             request.getSession().removeAttribute(USER_LOGIN_STATE);
             return true;
         }catch (Exception e){
             e.printStackTrace();
           throw new BusinessException(ErrorCode.PARAMS_ERROR,"删除用户不存在");
+        }*/
+        HttpSession session = request.getSession(false);
+        if (session == null || session.getAttribute(USER_LOGIN_STATE) == null) {
+            throw new BusinessException(ErrorCode.NOT_LOGIN, "用户未登录");
         }
+        session.removeAttribute(USER_LOGIN_STATE);
+        return true;
     }
 
     /**
