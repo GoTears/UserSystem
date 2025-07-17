@@ -1,0 +1,17 @@
+2025-07-17T21:28:02.873+08:00  INFO 45264 --- [restartedMain] c.t.usercenter.UserCenterApplication     : Starting UserCenterApplication using Java 17.0.8 with PID 45264 (D:\Study\user-center\user-center-backend\target\classes started by Taco in D:\Study\user-center\user-center-backend)
+2025-07-17T21:28:02.881+08:00  INFO 45264 --- [restartedMain] c.t.usercenter.UserCenterApplication     : No active profile set, falling back to 1 default profile: "default"
+2025-07-17T21:28:02.950+08:00  INFO 45264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-17T21:28:02.950+08:00  INFO 45264 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-17T21:28:04.054+08:00  INFO 45264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-07-17T21:28:04.058+08:00  INFO 45264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-07-17T21:28:04.095+08:00  INFO 45264 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-07-17T21:28:04.814+08:00  INFO 45264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-07-17T21:28:04.828+08:00  INFO 45264 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-07-17T21:28:04.829+08:00  INFO 45264 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-07-17T21:28:04.871+08:00  INFO 45264 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-07-17T21:28:04.871+08:00  INFO 45264 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1920 ms
+2025-07-17T21:28:06.432+08:00  INFO 45264 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-07-17T21:28:06.464+08:00  INFO 45264 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-07-17T21:28:06.476+08:00  INFO 45264 --- [restartedMain] c.t.usercenter.UserCenterApplication     : Started UserCenterApplication in 4.272 seconds (process running for 5.477)
+2025-07-17T21:28:10.314+08:00  INFO 45264 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-17T21:28:10.662+08:00  INFO 45264 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
