@@ -1,0 +1,43 @@
+-- 1、正常数据
+INSERT INTO user (username, userAccount, userPassword, avatarUrl, gender, phone, email, userStatus, createTime, updateTime, isDelete, userRole)
+VALUES ('管理员', 'admin', 'admin123456', 'https://example.com/avatar1.png', 1, '13800000001', 'admin@example.com', 0, NOW(), NOW(), 0, 1);
+
+-- 普通用户
+INSERT INTO user (username, userAccount, userPassword, avatarUrl, gender, phone, email, userStatus, createTime, updateTime, isDelete, userRole)
+VALUES ('张三', 'zhangsan', 'password123', 'https://example.com/avatar2.png', 1, '13800000002', 'zhangsan@example.com', 0, NOW(), NOW(), 0, 0);
+
+INSERT INTO user (username, userAccount, userPassword, avatarUrl, gender, phone, email, userStatus, createTime, updateTime, isDelete, userRole)
+VALUES ('李四', 'lisi', 'mypassword', 'https://example.com/avatar3.png', 2, '13800000003', 'lisi@example.com', 0, NOW(), NOW(), 0, 0);
+
+-- 只填必填项
+INSERT INTO user (userAccount, userPassword, userRole, userStatus, isDelete, createTime, updateTime)
+VALUES ('testuser', 'testpass123', 0, 0, 0, NOW(), NOW());
+
+-- 2、异常数据
+-- 账号重复
+INSERT INTO user (userAccount, userPassword, userRole, userStatus, isDelete, createTime, updateTime)
+VALUES ('admin', 'anotherpass', 0, 0, 0, NOW(), NOW());
+
+-- 密码过短
+INSERT INTO user (userAccount, userPassword, userRole, userStatus, isDelete, createTime, updateTime)
+VALUES ('shortpwd', '123', 0, 0, 0, NOW(), NOW());
+
+-- 账号或密码为空
+INSERT INTO user (userAccount, userPassword, userRole, userStatus, isDelete, createTime, updateTime)
+VALUES ('', 'validpassword', 0, 0, 0, NOW(), NOW());
+
+INSERT INTO user (userAccount, userPassword, userRole, userStatus, isDelete, createTime, updateTime)
+VALUES ('emptyPwd', '', 0, 0, 0, NOW(), NOW());
+
+-- 已删除/禁用用户
+
+INSERT INTO user (userAccount, userPassword, userRole, userStatus, isDelete, createTime, updateTime)
+VALUES ('deleteduser', 'validpassword', 0, 0, 1, NOW(), NOW());
+
+-- 禁用
+INSERT INTO user (userAccount, userPassword, userRole, userStatus, isDelete, createTime, updateTime)
+VALUES ('banneduser', 'validpassword', 0, 1, 0, NOW(), NOW());
+
+-- 邮箱/手机号格式异常
+INSERT INTO user (userAccount, userPassword, email, phone, userRole, userStatus, isDelete, createTime, updateTime)
+VALUES ('bademail', 'validpassword', 'not-an-email', 'notaphone', 0, 0, 0, NOW(), NOW());
