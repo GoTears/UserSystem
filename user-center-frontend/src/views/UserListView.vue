@@ -1,6 +1,6 @@
 <template>
-  <div class="user-list-container">
-    <el-card>
+  <div class="page-full-center">
+    <el-card style="width:1000px;max-width:100vw;">
       <template #header>
         <div class="card-header">
           <span>用户管理</span>
@@ -139,12 +139,21 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.user-list-container {
-  padding: 20px;
+.page-full-center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 .card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+el-card {
+  width: 100%;
+  max-width: 1000px;
+  margin: 40px auto;
 }
 </style> 

@@ -1,71 +1,89 @@
 <template>
-  <div class="login-container">
-    <el-card class="login-card">
-      <h2 style="text-align:center;">用户登录</h2>
-      <el-form :model="form" @submit.prevent="handleLogin" label-width="60px">
-        <el-form-item label="账号">
-          <el-input v-model="form.userAccount" autocomplete="username" />
-        </el-form-item>
-        <el-form-item label="密码">
-          <el-input v-model="form.userPassword" type="password" autocomplete="current-password" />
-        </el-form-item>
-        <el-form-item>
-          <el-button type="primary" :loading="loading" @click="handleLogin" style="width:100%;">登录</el-button>
-        </el-form-item>
-        <el-form-item>
-          <el-button @click="$router.push('/register')" style="width:100%;">没有账号？去注册</el-button>
-        </el-form-item>
-        <el-alert v-if="errorMsg" :title="errorMsg" type="error" show-icon style="margin-bottom:0;" />
-      </el-form>
-    </el-card>
+  <div id="userLoginPage">
+    <h2 class="title">用户登录</h2>
+    <el-form
+      :model="formState"
+      ref="formRef"
+      label-width="60px"
+      style="max-width: 480px; margin: 0 auto"
+      @submit.prevent="handleSubmit"
+    >
+      <el-form-item
+        label="账号"
+        prop="userAccount"
+        :rules="[{ required: true, message: '请输入账号', trigger: 'blur' }]"
+      >
+        <el-input
+          v-model="formState.userAccount"
+          placeholder="请输入账号"
+        />
+      </el-form-item>
+      <el-form-item
+        label="密码"
+        prop="userPassword"
+        :rules="[
+          { required: true, message: '请输入密码', trigger: 'blur' },
+          { min: 8, message: '密码不能小于 8 位', trigger: 'blur' }
+        ]"
+      >
+        <el-input
+          v-model="formState.userPassword"
+          type="password"
+          placeholder="请输入密码"
+        />
+      </el-form-item>
+      <el-form-item>
+        <el-button type="primary" @click="handleSubmit">登录</el-button>
+      </el-form-item>
+    </el-form>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-import { useRouter } from 'vue-router';
-import { useUserStore } from '../stores/counter';
+import { reactive, ref } from "vue";
+import { ElMessage } from "element-plus";
+import { useRouter } from "vue-router";
+import { useUserStore } from "../stores/counter";
 
-const form = ref({ userAccount: '', userPassword: '' });
-const loading = ref(false);
-const errorMsg = ref('');
+const formState = reactive({
+  userAccount: "",
+  userPassword: "",
+});
+const formRef = ref();
 const router = useRouter();
 const userStore = useUserStore();
 
-const handleLogin = async () => {
-  errorMsg.value = '';
-  loading.value = true;
-  try {
-    const res = await fetch('/api/user/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userAccount: form.value.userAccount, userPassword: form.value.userPassword })
+const handleSubmit = async () => {
+  await formRef.value.validate(async (valid: boolean) => {
+    if (!valid) return;
+    const res = await fetch("/api/user/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formState),
     });
     const data = await res.json();
     if (data.code === 0 && data.data) {
       userStore.setUser(data.data);
-      router.push('/');
+      ElMessage.success("登录成功");
+      router.push({ path: "/", replace: true });
     } else {
-      errorMsg.value = data.message || '登录失败';
+      ElMessage.error(data.message || "登录失败");
     }
-  } catch (e) {
-    errorMsg.value = '网络错误';
-  } finally {
-    loading.value = false;
-  }
+  });
 };
 </script>
 
 <style scoped>
-.login-container {
-  min-height: 100vh;
+#userLoginPage {
+  width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
-  background: #f5f6fa;
+  align-items: center;
 }
-.login-card {
-  width: 360px;
-  padding: 32px 24px 18px 24px;
+#userLoginPage .title {
+  text-align: center;
+  margin-bottom: 16px;
 }
 </style> 

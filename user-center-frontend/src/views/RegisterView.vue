@@ -1,5 +1,5 @@
 <template>
-  <div class="register-container">
+  <div class="page-full-center">
     <el-card class="register-card">
       <h2 style="text-align:center;">用户注册</h2>
       <el-form :model="form" :rules="rules" ref="formRef" label-width="80px">
@@ -110,15 +110,17 @@ const handleRegister = async () => {
 </script>
 
 <style scoped>
-.register-container {
-  min-height: 100vh;
+.page-full-center {
+  width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  background: #f5f6fa;
+  align-items: flex-start;
 }
 .register-card {
-  width: 400px;
+  width: 100%;
+  max-width: 420px;
+  margin: 40px auto;
   padding: 32px 24px 18px 24px;
 }
 </style> 

@@ -5,6 +5,7 @@ import RegisterView from '../views/RegisterView.vue'
 import UserCenterView from '../views/UserCenterView.vue'
 import UserListView from '../views/UserListView.vue'
 import UserEditView from '../views/UserEditView.vue'
+import NotFound from '../views/NotFound.vue'
 import { useUserStore } from '../stores/counter'
 
 const router = createRouter({
@@ -50,6 +51,11 @@ const router = createRouter({
       name: 'user-edit',
       component: UserEditView,
       meta: { requiresAuth: true }
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      name: 'notfound',
+      component: NotFound,
     },
   ],
 })

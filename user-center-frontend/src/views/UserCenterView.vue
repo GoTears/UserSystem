@@ -1,5 +1,5 @@
 <template>
-  <div class="user-center-container">
+  <div class="page-full-center">
     <el-card>
       <template #header>
         <div class="card-header">
@@ -71,14 +71,21 @@ onMounted(() => {
 </script>
 
 <style scoped>
-.user-center-container {
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
+.page-full-center {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 .card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+el-card {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
 }
 </style> 
