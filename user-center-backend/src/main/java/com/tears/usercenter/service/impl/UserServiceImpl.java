@@ -124,16 +124,21 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         // 查询用户是否存在
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("userAccount", userAccount);
-        queryWrapper.eq("userPassword", encryptPassword);
+//        queryWrapper.eq("userPassword", encryptPassword);
         User user = userMapper.selectOne(queryWrapper);
         //用户不存在
-        if (user == null){
+        if (user == null ){
             log.info("user login failed, userAccount cannot match userPassword");
             throw new BusinessException(ErrorCode.NULL_ERROR, "用户不存在");
         }
 
+        if (!user.getUserPassword().equals(encryptPassword)) {
+            log.info("user login failed, password not match for userAccount: {}", userAccount);
+            throw new BusinessException(ErrorCode.PARAMS_ERROR, "密码错误");
+        }
+
         //用户账户信息脱敏
-       User safetyUser = getSafetyUser(user);
+        User safetyUser = getSafetyUser(user);
 
         //记录用户登录状态
         request.getSession().setAttribute(USER_LOGIN_STATE,user);
