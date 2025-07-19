@@ -23,6 +23,12 @@
         <el-form-item label="手机号" prop="phone">
           <el-input v-model="form.phone" placeholder="请输入手机号" />
         </el-form-item>
+        <el-form-item label="创建时间">
+          <el-input v-model="form.createTime" disabled />
+        </el-form-item>
+        <el-form-item label="更新时间">
+          <el-input v-model="form.updateTime" disabled />
+        </el-form-item>
         <el-form-item>
           <el-button type="primary" @click="handleSubmit" :loading="submitting">保存</el-button>
           <el-button @click="$router.push('/user-center')">取消</el-button>
@@ -50,7 +56,9 @@ const form = ref({
   userAccount: '',
   username: '',
   email: '',
-  phone: ''
+  phone: '',
+  createTime: '',
+  updateTime: ''
 });
 
 const rules: FormRules = {
@@ -77,7 +85,9 @@ const fetchUserInfo = async () => {
         userAccount: user.userAccount,
         username: user.username || '',
         email: user.email || '',
-        phone: user.phone || ''
+        phone: user.phone || '',
+        createTime: user.createTime ? new Date(user.createTime).toLocaleString() : '',
+        updateTime: user.updateTime ? new Date(user.updateTime).toLocaleString() : ''
       };
     } else {
       ElMessage.error(data.message || '获取用户信息失败');

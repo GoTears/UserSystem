@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.DigestUtils;
 
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -177,6 +178,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
             existingUser.setUsername(username);
         }
 
+        // 设置更新时间
+        existingUser.setUpdateTime(new Date());
+
         this.updateById(existingUser);
         return existingUser;
     }
@@ -217,6 +221,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         safetyUser.setUserRole(originUser.getUserRole());
         safetyUser.setUserStatus(originUser.getUserStatus());
         safetyUser.setCreateTime(originUser.getCreateTime());
+        safetyUser.setUpdateTime(originUser.getUpdateTime());
         return safetyUser;
 
     }
