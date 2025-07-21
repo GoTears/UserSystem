@@ -5,7 +5,7 @@
       <span class="title">用户中心系统</span>
     </div>
     <div class="header-right">
-      <el-menu mode="horizontal" :default-active="$route.path" class="nav-menu" background-color="transparent" text-color="#333" active-text-color="#409EFF">
+      <el-menu mode="horizontal" :default-active="$route.path" class="nav-menu" background-color="transparent" text-color="#333" active-text-color="#409EFF" @select="handleMenuSelect">
         <el-menu-item index="/">首页</el-menu-item>
         <el-menu-item index="/about">关于</el-menu-item>
         <el-menu-item v-if="userStore.isLogin" index="/user-center">个人中心</el-menu-item>
@@ -20,7 +20,9 @@
           </span>
           <template #dropdown>
             <el-dropdown-menu>
-              <el-dropdown-item command="profile">个人信息</el-dropdown-item>
+              <el-dropdown-item command="about">关于</el-dropdown-item>
+              <el-dropdown-item command="center">个人中心</el-dropdown-item>
+              <el-dropdown-item v-if="userStore.user?.userRole === 1" command="user">用户管理</el-dropdown-item>
               <el-dropdown-item command="logout">退出登录</el-dropdown-item>
             </el-dropdown-menu>
           </template>
@@ -44,9 +46,17 @@ const router = useRouter();
 const userStore = useUserStore();
 const $route = useRoute();
 
+const handleMenuSelect = (index: string) => {
+  router.push(index);
+};
+
 const handleCommand = async (command: string) => {
-  if (command === 'profile') {
+  if (command === 'about') {
+    router.push('/about');
+  } else if (command === 'center') {
     router.push('/user-center');
+  } else if (command === 'user') {
+    router.push('/user-list');
   } else if (command === 'logout') {
     try {
       await fetch('/api/user/logout', { method: 'POST' });

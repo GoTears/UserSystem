@@ -17,14 +17,21 @@ public class GlobalExceptionHandler {
     //针对什么异常做什么处理
     @ExceptionHandler(BusinessException.class)
     public BaseResponse businessExceptionHandler(BusinessException e){
-        log.error("businessException: " + e.getMessage(), e);
+        log.error("BusinessException - Code: {}, Message: {}, Description: {}, StackTrace: {}", 
+            e.getCode(), e.getMessage(), e.getDescription(), e.getStackTrace());
         return ResultUtils.error(e.getCode(), e.getMessage(), e.getDescription());
     }
 
     @ExceptionHandler(RuntimeException.class)
-    public BaseResponse businessExceptionHandler(RuntimeException e){
-        log.error("runtimeException", e);
+    public BaseResponse runtimeExceptionHandler(RuntimeException e){
+        log.error("RuntimeException - Message: {}, StackTrace: {}", e.getMessage(), e.getStackTrace());
         return ResultUtils.error(ErrorCode.SYSTEM_ERROR, e.getMessage(), "");
+    }
+    
+    @ExceptionHandler(Exception.class)
+    public BaseResponse exceptionHandler(Exception e){
+        log.error("Exception - Message: {}, StackTrace: {}", e.getMessage(), e.getStackTrace());
+        return ResultUtils.error(ErrorCode.SYSTEM_ERROR, "系统内部异常", "");
     }
 
 

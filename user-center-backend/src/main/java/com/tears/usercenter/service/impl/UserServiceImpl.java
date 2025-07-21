@@ -129,7 +129,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         User user = userMapper.selectOne(queryWrapper);
         //用户不存在
         if (user == null ){
-            log.info("user login failed, userAccount cannot match userPassword");
+            log.info("user login failed, userAccount cannot be found in user-center system");
             throw new BusinessException(ErrorCode.NULL_ERROR, "用户不存在");
         }
 

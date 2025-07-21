@@ -1,6 +1,19 @@
 logging:
+  # 日志文件配置
   file:
-    name: user-center
+    name: logs/user-center.log
+    max-size: 10MB
+    max-history: 30
+  # 日志级别配置
+  level:
+    root: INFO
+    com.tears.usercenter: DEBUG
+    org.springframework.web: INFO
+    org.mybatis: DEBUG
+  # 日志格式配置
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n"
 server:
   port: 8080
 

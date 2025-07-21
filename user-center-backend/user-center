@@ -3196,3 +3196,7 @@ com.tears.usercenter.exception.BusinessException: 请求参数错误
 2025-07-20T04:43:49.518+08:00  INFO 49300 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2025-07-20T04:43:49.787+08:00  INFO 49300 --- [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7755e464
 2025-07-20T04:43:49.789+08:00  INFO 49300 --- [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-07-20T04:50:48.886+08:00  INFO 49300 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-07-20T04:50:49.233+08:00  INFO 49300 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-07-20T04:50:49.248+08:00  INFO 49300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-07-20T04:50:49.254+08:00  INFO 49300 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -15,6 +15,8 @@
               <el-icon><Search /></el-icon>
             </template>
           </el-input>
+          <!-- 顶部个人中心按钮 -->
+          <el-button type="primary" @click="goToMyCenter" style="margin-left: 16px;">个人中心</el-button>
         </div>
       </template>
       
@@ -36,7 +38,7 @@
             {{ formatDate(scope.row.createTime) }}
           </template>
         </el-table-column>
-        <el-table-column label="操作" width="120">
+        <el-table-column label="操作" width="180">
           <template #default="scope">
             <el-button 
               type="danger" 
@@ -45,6 +47,16 @@
               :disabled="scope.row.userRole === 1"
             >
               删除
+            </el-button>
+            <!-- 行内个人中心按钮，只允许跳转到当前登录用户的个人中心 -->
+            <el-button 
+              type="primary" 
+              size="small" 
+              @click="goToUserCenter(scope.row)"
+              :disabled="scope.row.id !== userStore.user.id"
+              style="margin-left: 8px;"
+            >
+              个人中心
             </el-button>
           </template>
         </el-table-column>
@@ -121,6 +133,20 @@ const handleDelete = async (user: any) => {
     if (e !== 'cancel') {
       ElMessage.error('删除失败');
     }
+  }
+};
+
+// 顶部个人中心按钮方法
+const goToMyCenter = () => {
+  router.push('/user-center');
+};
+
+// 行内个人中心按钮方法，只允许跳转到当前登录用户的个人中心
+const goToUserCenter = (user: any) => {
+  if (user.id === userStore.user.id) {
+    router.push('/user-center');
+  } else {
+    ElMessage.warning('只能查看自己的个人中心');
   }
 };
 

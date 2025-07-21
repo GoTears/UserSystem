@@ -127,7 +127,7 @@ public class UserController {
      * @param request
      * @return
      */
-    @PostMapping("logout")
+    @PostMapping("/logout")
     public BaseResponse<Boolean> userLogout(HttpServletRequest request){
         if (request == null) {
             throw new BusinessException(ErrorCode.PARAMS_ERROR);
@@ -136,7 +136,7 @@ public class UserController {
         return ResultUtils.success(userLogout);
     }
 
-    @GetMapping("getuser")
+    @GetMapping("/getuser")
     public BaseResponse<User> getCurrentUser(HttpServletRequest request){
         Object userObj = request.getSession().getAttribute(USER_LOGIN_STATE);
         User currentUser = (User) userObj;
