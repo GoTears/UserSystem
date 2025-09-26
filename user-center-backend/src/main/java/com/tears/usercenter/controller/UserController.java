@@ -26,7 +26,8 @@ import static com.tears.usercenter.constant.UserConstant.USER_LOGIN_STATE;
  * @author  Tears
  */
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/api/user")
+@CrossOrigin(origins = {"http://localhost:5173/"}, allowCredentials = "true")
 public class UserController {
 
     @Resource
