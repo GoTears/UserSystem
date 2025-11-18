@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-// src/main/java/.../config/WebConfig.java
+// 解决跨域问题
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
     @Override

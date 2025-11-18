@@ -17,8 +17,9 @@
       </a-col>
       <a-col flex="80px">
         <div class="user-login-status">
-          <div v-if="loginUserStore.loginUser.id">
-            {{ loginUserStore.loginUser.username ?? "无名" }}
+          <div v-if="loginUserStore.loginUser.id" class="user-info">
+            <span class="username">{{ displayName }}</span>
+            <a-button type="link" class="logout-btn" @click="logout">退出登录</a-button>
           </div>
           <div v-else>
             <a-button type="primary" href="/user/login">登录</a-button>
@@ -30,11 +31,13 @@
 </template>
 
 <script lang="ts" setup>
-import { h, ref } from "vue";
+import { h, ref, computed } from "vue";
 import { CrownOutlined, HomeOutlined } from "@ant-design/icons-vue";
-import { MenuProps } from "ant-design-vue";
+import type { MenuProps } from "ant-design-vue";
+import { message } from "ant-design-vue";
 import { useRouter } from "vue-router";
 import { useLoginUserStore } from "@/store/useLoginUserStore";
+import { userLogout } from "@/api/user";
 
 const loginUserStore = useLoginUserStore();
 
@@ -51,6 +54,25 @@ const current = ref<string[]>(["mail"]);
 router.afterEach((to, from, failure) => {
   current.value = [to.path];
 });
+
+const displayName = computed(
+  () =>
+    loginUserStore.loginUser.username ||
+    loginUserStore.loginUser.userAccount ||
+    "无名"
+);
+
+const logout = async () => {
+  try {
+    await userLogout();
+    message.success("已退出登录");
+  } catch (error) {
+    message.error("退出失败，请重试");
+    return;
+  }
+  loginUserStore.resetLoginUser();
+  router.push("/user/login");
+};
 
 const items = ref<MenuProps["items"]>([
   {
@@ -101,5 +123,28 @@ const items = ref<MenuProps["items"]>([
 
 .logo {
   height: 48px;
+}
+
+.user-info {
+  /* display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px; */
+  display: flex;
+  flex-direction: row;     /* 从 column 改为 row */
+  align-items: center;
+  gap: 8px;   
+}
+
+.username {
+  font-weight: 600;
+  color: #333;
+}
+
+.logout-btn {
+ font-weight: 600;
+  padding: 0;
+  margin-top: -4px;   /* ✨ 往上移 */
+  line-height: 1;     /* 减少按钮高度 */
 }
 </style>

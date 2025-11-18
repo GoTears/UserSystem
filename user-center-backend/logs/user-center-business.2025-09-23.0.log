@@ -1,4 +1,0 @@
-2025-09-23 10:09:06.458 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Starting UserCenterApplication using Java 17.0.8 with PID 56544 (D:\Study\user-center\user-center-backend\target\classes started by Taco in D:\Study\user-center\user-center-backend)
-2025-09-23 10:09:06.464 [restartedMain] DEBUG com.tears.usercenter.UserCenterApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
-2025-09-23 10:09:06.467 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - No active profile set, falling back to 1 default profile: "default"
-2025-09-23 10:09:10.465 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Started UserCenterApplication in 5.051 seconds (process running for 6.412)

@@ -10,9 +10,10 @@ export interface LoginUser {
 }
 
 export const useLoginUserStore = defineStore("loginUser", () => {
-  const loginUser = ref<LoginUser>({
+  const defaultUser: LoginUser = {
     username: "未登录",
-  });
+  };
+  const loginUser = ref<LoginUser>({ ...defaultUser });
 
   async function fetchLoginUser() {
     const res = await getCurrentUser();
@@ -25,5 +26,9 @@ export const useLoginUserStore = defineStore("loginUser", () => {
     loginUser.value = newLoginUser;
   }
 
-  return { loginUser, setLoginUser, fetchLoginUser };
+  function resetLoginUser() {
+    loginUser.value = { ...defaultUser };
+  }
+
+  return { loginUser, setLoginUser, fetchLoginUser, resetLoginUser };
 });

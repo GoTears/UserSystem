@@ -27,6 +27,7 @@
         :rules="[
           { required: true, message: '请输入密码' },
           { min: 8, message: '密码不能小于 8 位' },
+          { max: 16, message: '密码不能大于 16 位' },
         ]"
       >
         <a-input-password
@@ -40,6 +41,7 @@
         :rules="[
           { required: true, message: '请输入确认密码' },
           { min: 8, message: '确认密码不能小于 8 位' },
+          { max: 16, message: '确认密码不能大于 16 位' },
         ]"
       >
         <a-input-password
