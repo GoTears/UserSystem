@@ -1,0 +1,127 @@
+2025-11-21 09:21:08.830 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Starting UserCenterApplication using Java 17.0.17 with PID 51456 (/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes started by tears in /Users/tears/IdeaProjects/UserSystem)
+2025-11-21 09:21:08.842 [restartedMain] DEBUG com.tears.usercenter.UserCenterApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-11-21 09:21:08.847 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 09:21:17.697 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Started UserCenterApplication in 9.701 seconds (process running for 10.351)
+2025-11-21 09:28:06.356 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Starting UserCenterApplication using Java 17.0.17 with PID 51538 (/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes started by tears in /Users/tears/IdeaProjects/UserSystem)
+2025-11-21 09:28:06.361 [restartedMain] DEBUG com.tears.usercenter.UserCenterApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-11-21 09:28:06.367 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 09:28:15.024 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Started UserCenterApplication in 9.501 seconds (process running for 10.06)
+2025-11-21 09:28:44.791 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 09:28:44.811 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123123(String)
+2025-11-21 09:28:44.824 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 09:28:44.829 [http-nio-8080-exec-2] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 09:33:41.367 [http-nio-8080-exec-4] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 09:33:41.370 [http-nio-8080-exec-4] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123123(String)
+2025-11-21 09:33:41.375 [http-nio-8080-exec-4] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 09:33:41.376 [http-nio-8080-exec-4] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 09:34:53.681 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 09:34:53.688 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123123(String)
+2025-11-21 09:34:53.690 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 09:34:53.691 [http-nio-8080-exec-6] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 09:35:17.857 [http-nio-8080-exec-7] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 09:35:17.860 [http-nio-8080-exec-7] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123123(String)
+2025-11-21 09:35:17.863 [http-nio-8080-exec-7] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 09:35:17.865 [http-nio-8080-exec-7] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 10:02:08.943 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 10:02:08.945 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 1231231(String)
+2025-11-21 10:02:08.955 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 10:02:08.958 [http-nio-8080-exec-2] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 10:13:47.899 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 10:13:47.899 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 1231231(String)
+2025-11-21 10:13:47.902 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 10:13:47.903 [http-nio-8080-exec-5] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 10:30:38.720 [http-nio-8080-exec-8] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 10:30:38.721 [http-nio-8080-exec-8] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123132131(String)
+2025-11-21 10:30:38.724 [http-nio-8080-exec-8] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 10:30:38.724 [http-nio-8080-exec-8] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 10:36:51.010 [http-nio-8080-exec-10] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 10:36:51.015 [http-nio-8080-exec-10] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 1231231(String)
+2025-11-21 10:36:51.020 [http-nio-8080-exec-10] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 10:36:51.021 [http-nio-8080-exec-10] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 10:37:47.555 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 10:37:47.556 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 1231231(String)
+2025-11-21 10:37:47.557 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 10:37:47.558 [http-nio-8080-exec-2] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 10:46:50.823 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 10:46:50.825 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123123(String)
+2025-11-21 10:46:50.828 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 10:46:50.829 [http-nio-8080-exec-5] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 11:03:44.388 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Starting UserCenterApplication using Java 17.0.17 with PID 53429 (/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes started by tears in /Users/tears/IdeaProjects/UserSystem)
+2025-11-21 11:03:44.389 [restartedMain] DEBUG com.tears.usercenter.UserCenterApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-11-21 11:03:44.392 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 11:03:53.106 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Started UserCenterApplication in 9.54 seconds (process running for 10.127)
+2025-11-21 11:04:00.215 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 11:04:00.246 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123123(String)
+2025-11-21 11:04:00.263 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 11:04:00.268 [http-nio-8080-exec-2] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 11:11:02.231 [http-nio-8080-exec-4] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 11:11:02.233 [http-nio-8080-exec-4] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123123(String)
+2025-11-21 11:11:02.237 [http-nio-8080-exec-4] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 11:11:02.237 [http-nio-8080-exec-4] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 11:13:46.209 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 11:13:46.216 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 11:13:46.233 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 2
+2025-11-21 11:15:10.871 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 11:15:10.872 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 11:15:10.878 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 11:15:10.879 [http-nio-8080-exec-2] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, password not match for userAccount: admin
+2025-11-21 11:15:32.980 [http-nio-8080-exec-3] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 11:15:32.981 [http-nio-8080-exec-3] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 11:15:32.995 [http-nio-8080-exec-3] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 11:15:32.998 [http-nio-8080-exec-3] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, password not match for userAccount: admin
+2025-11-21 11:17:33.129 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 11:17:33.131 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 11:17:33.143 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 11:17:33.144 [http-nio-8080-exec-5] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, password not match for userAccount: admin
+2025-11-21 15:24:32.062 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Starting UserCenterApplication using Java 17.0.17 with PID 54273 (/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes started by tears in /Users/tears/IdeaProjects/UserSystem)
+2025-11-21 15:24:32.064 [restartedMain] DEBUG com.tears.usercenter.UserCenterApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-11-21 15:24:32.068 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 15:24:41.018 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Started UserCenterApplication in 9.931 seconds (process running for 10.608)
+2025-11-21 16:29:12.310 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 16:29:12.361 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 16:29:12.388 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 16:29:12.401 [http-nio-8080-exec-5] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, password not match for userAccount: admin
+2025-11-21 16:29:15.021 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 16:29:15.023 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 16:29:15.028 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 16:29:15.028 [http-nio-8080-exec-6] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, password not match for userAccount: admin
+2025-11-21 16:29:44.686 [http-nio-8080-exec-8] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 16:29:44.693 [http-nio-8080-exec-8] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 16:29:44.698 [http-nio-8080-exec-8] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 16:29:44.699 [http-nio-8080-exec-8] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, password not match for userAccount: admin
+2025-11-21 16:30:12.762 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 16:30:12.764 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 16:30:12.769 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 16:30:12.771 [http-nio-8080-exec-9] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, password not match for userAccount: admin
+2025-11-21 16:31:01.032 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Starting UserCenterApplication using Java 17.0.17 with PID 54273 (/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes started by tears in /Users/tears/IdeaProjects/UserSystem)
+2025-11-21 16:31:01.033 [restartedMain] DEBUG com.tears.usercenter.UserCenterApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-11-21 16:31:01.034 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 16:31:07.279 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Started UserCenterApplication in 6.429 seconds (process running for 2988.669)
+2025-11-21 16:31:10.966 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Starting UserCenterApplication using Java 17.0.17 with PID 54273 (/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes started by tears in /Users/tears/IdeaProjects/UserSystem)
+2025-11-21 16:31:10.968 [restartedMain] DEBUG com.tears.usercenter.UserCenterApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-11-21 16:31:10.968 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 16:31:11.685 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Started UserCenterApplication in 0.846 seconds (process running for 2993.075)
+2025-11-21 16:31:31.660 [http-nio-8080-exec-1] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 16:31:31.662 [http-nio-8080-exec-1] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 16:31:31.665 [http-nio-8080-exec-1] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 16:31:31.710 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE id=? AND isDelete=0
+2025-11-21 16:31:31.710 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - ==> Parameters: 1(Long)
+2025-11-21 16:31:31.712 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - <==      Total: 1
+2025-11-21 16:31:39.692 [http-nio-8080-exec-3] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0
+2025-11-21 16:31:39.693 [http-nio-8080-exec-3] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 
+2025-11-21 16:31:39.704 [http-nio-8080-exec-3] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 9
+2025-11-21 17:05:58.137 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 17:05:58.138 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 17:05:58.153 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 17:05:58.165 [http-nio-8080-exec-7] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE id=? AND isDelete=0
+2025-11-21 17:05:58.165 [http-nio-8080-exec-7] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - ==> Parameters: 1(Long)
+2025-11-21 17:05:58.167 [http-nio-8080-exec-7] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - <==      Total: 1
+2025-11-21 17:08:26.899 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 17:08:26.900 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 17:08:26.905 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 17:08:26.918 [http-nio-8080-exec-10] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE id=? AND isDelete=0
+2025-11-21 17:08:26.919 [http-nio-8080-exec-10] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - ==> Parameters: 1(Long)
+2025-11-21 17:08:26.922 [http-nio-8080-exec-10] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - <==      Total: 1
+2025-11-21 17:08:30.662 [http-nio-8080-exec-1] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0
+2025-11-21 17:08:30.663 [http-nio-8080-exec-1] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 
+2025-11-21 17:08:30.686 [http-nio-8080-exec-1] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 9

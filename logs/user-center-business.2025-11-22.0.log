@@ -1,0 +1,6 @@
+2025-11-22 17:46:13.800 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-22 17:46:13.812 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-22 17:46:13.832 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-22 17:46:13.860 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE id=? AND isDelete=0
+2025-11-22 17:46:13.860 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - ==> Parameters: 1(Long)
+2025-11-22 17:46:13.863 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - <==      Total: 1

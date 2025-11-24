@@ -1,0 +1,4 @@
+2025-11-14 15:38:37.914 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Starting UserCenterApplication using Java 17.0.17 with PID 43855 (/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes started by tears in /Users/tears/IdeaProjects/UserSystem)
+2025-11-14 15:38:37.917 [restartedMain] DEBUG com.tears.usercenter.UserCenterApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-11-14 15:38:37.922 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-14 15:38:46.871 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Started UserCenterApplication in 9.804 seconds (process running for 10.403)

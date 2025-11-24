@@ -14,7 +14,10 @@
       <a-form-item
         label="账号"
         name="userAccount"
-        :rules="[{ required: true, message: '请输入账号' }]"
+        :rules="[
+          { required: true, message: '请输入账号' },
+          { max: 50, message: '账号不能大于 50 位' },
+        ]"
       >
         <a-input
           v-model:value="formState.userAccount"
@@ -27,7 +30,7 @@
         :rules="[
           { required: true, message: '请输入密码' },
           { min: 8, message: '密码不能小于 8 位' },
-          { max: 16, message: '密码不能大于 16 位' },
+          // { max: 16, message: '密码不能大于 16 位' },
         ]"
       >
         <a-input-password
@@ -41,14 +44,14 @@
         :rules="[
           { required: true, message: '请输入确认密码' },
           { min: 8, message: '确认密码不能小于 8 位' },
-          { max: 16, message: '确认密码不能大于 16 位' },
+          // { max: 16, message: '确认密码不能大于 16 位' },
         ]"
       >
         <a-input-password
           v-model:value="formState.checkPassword"
           placeholder="请输入确认密码"
         />
-      
+
       </a-form-item>
       <!-- <a-form-item
         label="编号"
@@ -66,6 +69,7 @@
     </a-form>
   </div>
 </template>
+
 <script lang="ts" setup>
 import { reactive } from "vue";
 import { userRegister } from "@/api/user";
@@ -92,12 +96,17 @@ const router = useRouter();
  * 提交表单
  * @param values
  */
-const handleSubmit = async (values: any) => {
+const handleSubmit = async (values: FormState) => {
   // 判断两次输入的密码是否一致
-  if (formState.userPassword !== formState.checkPassword) {
+  if ((formState.userPassword || "").trim() !== (formState.checkPassword || "").trim()) {
     message.error("二次输入的密码不一致");
     return;
+  // if (formState.userPassword !== formState.checkPassword) {
+  //   message.error("二次输入的密码不一致");
+  //   return;
   }
+
+
   const res = await userRegister(values);
   // 注册成功，跳转到登录页面
   if (res.data.code === 0 && res.data.data) {
@@ -109,7 +118,8 @@ const handleSubmit = async (values: any) => {
   } else {
     message.error("注册失败，" + res.data.description);
   }
-};
+ };
+
 </script>
 
 <style scoped>

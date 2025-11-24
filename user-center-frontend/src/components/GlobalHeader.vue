@@ -11,7 +11,7 @@
         <a-menu
           v-model:selectedKeys="current"
           mode="horizontal"
-          :items="items"
+          :items="menuItems"
           @click="doMenuClick"
         />
       </a-col>
@@ -107,6 +107,24 @@ const items = ref<MenuProps["items"]>([
 //     title: "编程导航",
 //   },
 ]);
+
+// 动态菜单：已登录则隐藏 login/register
+const menuItems = computed<MenuProps["items"]>(() => {
+  const isLoggedIn = !!loginUserStore.loginUser.id;
+  const itemsList = items.value || [];
+
+  if (!isLoggedIn) {
+    // 未登录：显示全部
+    return itemsList;
+  }
+
+  // 已登录：过滤掉 login/register
+  return itemsList.filter(
+    (item: any) =>
+      item?.key !== "/user/login" && item?.key !== "/user/register"
+  );
+});
+
 </script>
 
 <style scoped>
@@ -131,7 +149,7 @@ const items = ref<MenuProps["items"]>([
   align-items: flex-start;
   gap: 2px; */
   display: flex;
-  flex-direction: row;     /* 从 column 改为 row */
+  flex-direction: column;     /* 从 column 改为 row */
   align-items: center;
   gap: 8px;   
 }
@@ -144,7 +162,7 @@ const items = ref<MenuProps["items"]>([
 .logout-btn {
  font-weight: 600;
   padding: 0;
-  margin-top: -4px;   /* ✨ 往上移 */
+  margin-top: -40px;   /* ✨ 往上移 */
   line-height: 1;     /* 减少按钮高度 */
 }
 </style>

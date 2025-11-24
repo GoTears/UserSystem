@@ -1,0 +1,467 @@
+2025-11-21 09:21:08.830 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Starting UserCenterApplication using Java 17.0.17 with PID 51456 (/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes started by tears in /Users/tears/IdeaProjects/UserSystem)
+2025-11-21 09:21:08.842 [restartedMain] DEBUG com.tears.usercenter.UserCenterApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-11-21 09:21:08.847 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 09:21:08.952 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-21 09:21:08.953 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-21 09:21:10.028 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-21 09:21:10.030 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-21 09:21:10.092 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 0 Redis repository interfaces.
+2025-11-21 09:21:10.248 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes/com/tears/usercenter/mapper/UserMapper.class]
+2025-11-21 09:21:10.251 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'com.tears.usercenter.mapper.UserMapper' mapperInterface
+2025-11-21 09:21:10.915 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-21 09:21:10.924 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-21 09:21:10.925 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-21 09:21:10.926 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-11-21 09:21:10.975 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-21 09:21:10.977 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2022 ms
+2025-11-21 09:21:16.563 [restartedMain] WARN  com.baomidou.mybatisplus.core.toolkit.Sequence - Initialization Sequence Very Slow! Get datacenterId:2 workerId:7
+2025-11-21 09:21:17.635 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-21 09:21:17.670 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-21 09:21:17.682 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-21 09:21:17.697 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Started UserCenterApplication in 9.701 seconds (process running for 10.351)
+2025-11-21 09:21:47.166 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-21 09:21:47.166 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-21 09:21:47.172 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2025-11-21 09:21:47.309 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 09:21:47.312 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1da87ca1] was not registered for synchronization because synchronization is not active
+2025-11-21 09:21:47.343 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 09:21:48.736 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1da87ca1]
+2025-11-21 09:21:48.793 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: <EOL>### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection<EOL>### The error may exist in com/tears/usercenter/mapper/UserMapper.java (best guess)<EOL>### The error may involve com.tears.usercenter.mapper.UserMapper.selectList<EOL>### The error occurred while executing a query<EOL>### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection]
+2025-11-21 09:22:34.210 [http-nio-8080-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 09:22:34.212 [http-nio-8080-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44e30153] was not registered for synchronization because synchronization is not active
+2025-11-21 09:22:34.214 [http-nio-8080-exec-4] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 09:22:35.279 [http-nio-8080-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44e30153]
+2025-11-21 09:22:35.287 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.mybatis.spring.MyBatisSystemException: <EOL>### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection<EOL>### The error may exist in com/tears/usercenter/mapper/UserMapper.java (best guess)<EOL>### The error may involve com.tears.usercenter.mapper.UserMapper.selectList<EOL>### The error occurred while executing a query<EOL>### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection]
+2025-11-21 09:28:01.683 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-21 09:28:03.703 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-21 09:28:06.356 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Starting UserCenterApplication using Java 17.0.17 with PID 51538 (/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes started by tears in /Users/tears/IdeaProjects/UserSystem)
+2025-11-21 09:28:06.361 [restartedMain] DEBUG com.tears.usercenter.UserCenterApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-11-21 09:28:06.367 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 09:28:06.453 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-21 09:28:06.455 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-21 09:28:07.461 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-21 09:28:07.464 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-21 09:28:07.522 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 0 Redis repository interfaces.
+2025-11-21 09:28:07.660 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes/com/tears/usercenter/mapper/UserMapper.class]
+2025-11-21 09:28:07.669 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'com.tears.usercenter.mapper.UserMapper' mapperInterface
+2025-11-21 09:28:08.287 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-21 09:28:08.295 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-21 09:28:08.296 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-21 09:28:08.296 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-11-21 09:28:08.343 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-21 09:28:08.344 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1887 ms
+2025-11-21 09:28:14.952 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-21 09:28:14.991 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-21 09:28:15.006 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-21 09:28:15.024 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Started UserCenterApplication in 9.501 seconds (process running for 10.06)
+2025-11-21 09:28:44.287 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-21 09:28:44.287 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-21 09:28:44.291 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-11-21 09:28:44.421 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 09:28:44.424 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@537816c5] was not registered for synchronization because synchronization is not active
+2025-11-21 09:28:44.454 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 09:28:44.764 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44a9c83d
+2025-11-21 09:28:44.767 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 09:28:44.776 [http-nio-8080-exec-2] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@916660206 wrapping com.mysql.cj.jdbc.ConnectionImpl@44a9c83d] will not be managed by Spring
+2025-11-21 09:28:44.791 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 09:28:44.811 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123123(String)
+2025-11-21 09:28:44.824 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 09:28:44.827 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@537816c5]
+2025-11-21 09:28:44.829 [http-nio-8080-exec-2] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 09:28:44.865 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求数据为空]
+2025-11-21 09:33:41.356 [http-nio-8080-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 09:33:41.360 [http-nio-8080-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9c6f768] was not registered for synchronization because synchronization is not active
+2025-11-21 09:33:41.367 [http-nio-8080-exec-4] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@117512224 wrapping com.mysql.cj.jdbc.ConnectionImpl@44a9c83d] will not be managed by Spring
+2025-11-21 09:33:41.367 [http-nio-8080-exec-4] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 09:33:41.370 [http-nio-8080-exec-4] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123123(String)
+2025-11-21 09:33:41.375 [http-nio-8080-exec-4] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 09:33:41.376 [http-nio-8080-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9c6f768]
+2025-11-21 09:33:41.376 [http-nio-8080-exec-4] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 09:33:41.388 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求数据为空]
+2025-11-21 09:34:53.674 [http-nio-8080-exec-6] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 09:34:53.675 [http-nio-8080-exec-6] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@30d44b0d] was not registered for synchronization because synchronization is not active
+2025-11-21 09:34:53.680 [http-nio-8080-exec-6] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1041478503 wrapping com.mysql.cj.jdbc.ConnectionImpl@44a9c83d] will not be managed by Spring
+2025-11-21 09:34:53.681 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 09:34:53.688 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123123(String)
+2025-11-21 09:34:53.690 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 09:34:53.691 [http-nio-8080-exec-6] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@30d44b0d]
+2025-11-21 09:34:53.691 [http-nio-8080-exec-6] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 09:34:53.698 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求数据为空]
+2025-11-21 09:35:17.846 [http-nio-8080-exec-7] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 09:35:17.848 [http-nio-8080-exec-7] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44e30153] was not registered for synchronization because synchronization is not active
+2025-11-21 09:35:17.857 [http-nio-8080-exec-7] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1243936703 wrapping com.mysql.cj.jdbc.ConnectionImpl@44a9c83d] will not be managed by Spring
+2025-11-21 09:35:17.857 [http-nio-8080-exec-7] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 09:35:17.860 [http-nio-8080-exec-7] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123123(String)
+2025-11-21 09:35:17.863 [http-nio-8080-exec-7] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 09:35:17.865 [http-nio-8080-exec-7] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@44e30153]
+2025-11-21 09:35:17.865 [http-nio-8080-exec-7] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 09:35:17.870 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求数据为空]
+2025-11-21 09:59:30.360 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求参数错误]
+2025-11-21 09:59:35.770 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m13s327ms).
+2025-11-21 10:02:08.932 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 10:02:08.933 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d8aba87] was not registered for synchronization because synchronization is not active
+2025-11-21 10:02:08.942 [http-nio-8080-exec-2] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@260413677 wrapping com.mysql.cj.jdbc.ConnectionImpl@9185704] will not be managed by Spring
+2025-11-21 10:02:08.943 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 10:02:08.945 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 1231231(String)
+2025-11-21 10:02:08.955 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 10:02:08.958 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d8aba87]
+2025-11-21 10:02:08.958 [http-nio-8080-exec-2] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 10:02:08.973 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求数据为空]
+2025-11-21 10:13:47.894 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 10:13:47.895 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25c1040c] was not registered for synchronization because synchronization is not active
+2025-11-21 10:13:47.898 [http-nio-8080-exec-5] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1782310143 wrapping com.mysql.cj.jdbc.ConnectionImpl@9185704] will not be managed by Spring
+2025-11-21 10:13:47.899 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 10:13:47.899 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 1231231(String)
+2025-11-21 10:13:47.902 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 10:13:47.902 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25c1040c]
+2025-11-21 10:13:47.903 [http-nio-8080-exec-5] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 10:13:47.910 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求数据为空]
+2025-11-21 10:30:38.707 [http-nio-8080-exec-8] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 10:30:38.714 [http-nio-8080-exec-8] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@373e6118] was not registered for synchronization because synchronization is not active
+2025-11-21 10:30:38.718 [http-nio-8080-exec-8] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@972654991 wrapping com.mysql.cj.jdbc.ConnectionImpl@3dc60a68] will not be managed by Spring
+2025-11-21 10:30:38.720 [http-nio-8080-exec-8] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 10:30:38.721 [http-nio-8080-exec-8] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123132131(String)
+2025-11-21 10:30:38.724 [http-nio-8080-exec-8] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 10:30:38.724 [http-nio-8080-exec-8] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@373e6118]
+2025-11-21 10:30:38.724 [http-nio-8080-exec-8] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 10:30:38.733 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求数据为空]
+2025-11-21 10:36:50.992 [http-nio-8080-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 10:36:50.995 [http-nio-8080-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35604a24] was not registered for synchronization because synchronization is not active
+2025-11-21 10:36:51.009 [http-nio-8080-exec-10] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@828360784 wrapping com.mysql.cj.jdbc.ConnectionImpl@3dc60a68] will not be managed by Spring
+2025-11-21 10:36:51.010 [http-nio-8080-exec-10] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 10:36:51.015 [http-nio-8080-exec-10] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 1231231(String)
+2025-11-21 10:36:51.020 [http-nio-8080-exec-10] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 10:36:51.021 [http-nio-8080-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@35604a24]
+2025-11-21 10:36:51.021 [http-nio-8080-exec-10] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 10:36:51.031 [http-nio-8080-exec-10] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求数据为空]
+2025-11-21 10:37:47.548 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 10:37:47.549 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7838e742] was not registered for synchronization because synchronization is not active
+2025-11-21 10:37:47.553 [http-nio-8080-exec-2] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@861089590 wrapping com.mysql.cj.jdbc.ConnectionImpl@3dc60a68] will not be managed by Spring
+2025-11-21 10:37:47.555 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 10:37:47.556 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 1231231(String)
+2025-11-21 10:37:47.557 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 10:37:47.558 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7838e742]
+2025-11-21 10:37:47.558 [http-nio-8080-exec-2] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 10:37:47.563 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求数据为空]
+2025-11-21 10:46:50.816 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 10:46:50.818 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3fbd1ca4] was not registered for synchronization because synchronization is not active
+2025-11-21 10:46:50.822 [http-nio-8080-exec-5] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@169089968 wrapping com.mysql.cj.jdbc.ConnectionImpl@3dc60a68] will not be managed by Spring
+2025-11-21 10:46:50.823 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 10:46:50.825 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123123(String)
+2025-11-21 10:46:50.828 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 10:46:50.829 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3fbd1ca4]
+2025-11-21 10:46:50.829 [http-nio-8080-exec-5] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 10:46:50.839 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求数据为空]
+2025-11-21 11:03:41.706 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-21 11:03:41.718 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-21 11:03:41.757 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-21 11:03:41.766 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-21 11:03:44.388 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Starting UserCenterApplication using Java 17.0.17 with PID 53429 (/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes started by tears in /Users/tears/IdeaProjects/UserSystem)
+2025-11-21 11:03:44.389 [restartedMain] DEBUG com.tears.usercenter.UserCenterApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-11-21 11:03:44.392 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 11:03:44.468 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-21 11:03:44.468 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-21 11:03:45.498 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-21 11:03:45.503 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-21 11:03:45.572 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 45 ms. Found 0 Redis repository interfaces.
+2025-11-21 11:03:45.703 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes/com/tears/usercenter/mapper/UserMapper.class]
+2025-11-21 11:03:45.705 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'com.tears.usercenter.mapper.UserMapper' mapperInterface
+2025-11-21 11:03:46.332 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-21 11:03:46.341 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-21 11:03:46.342 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-21 11:03:46.342 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-11-21 11:03:46.399 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-21 11:03:46.401 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1930 ms
+2025-11-21 11:03:51.932 [restartedMain] WARN  com.baomidou.mybatisplus.core.toolkit.Sequence - Initialization Sequence Very Slow! Get datacenterId:2 workerId:11
+2025-11-21 11:03:53.044 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-21 11:03:53.077 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-21 11:03:53.089 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-21 11:03:53.106 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Started UserCenterApplication in 9.54 seconds (process running for 10.127)
+2025-11-21 11:03:59.708 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-21 11:03:59.708 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-21 11:03:59.714 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2025-11-21 11:03:59.838 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 11:03:59.841 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@537816c5] was not registered for synchronization because synchronization is not active
+2025-11-21 11:03:59.873 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 11:04:00.186 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44a9c83d
+2025-11-21 11:04:00.188 [http-nio-8080-exec-2] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 11:04:00.202 [http-nio-8080-exec-2] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@916660206 wrapping com.mysql.cj.jdbc.ConnectionImpl@44a9c83d] will not be managed by Spring
+2025-11-21 11:04:00.215 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 11:04:00.246 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123123(String)
+2025-11-21 11:04:00.263 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 11:04:00.267 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@537816c5]
+2025-11-21 11:04:00.268 [http-nio-8080-exec-2] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 11:04:00.319 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求数据为空]
+2025-11-21 11:11:02.218 [http-nio-8080-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 11:11:02.221 [http-nio-8080-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9c6f768] was not registered for synchronization because synchronization is not active
+2025-11-21 11:11:02.228 [http-nio-8080-exec-4] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@117512224 wrapping com.mysql.cj.jdbc.ConnectionImpl@44a9c83d] will not be managed by Spring
+2025-11-21 11:11:02.231 [http-nio-8080-exec-4] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 11:11:02.233 [http-nio-8080-exec-4] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 123123(String)
+2025-11-21 11:11:02.237 [http-nio-8080-exec-4] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 0
+2025-11-21 11:11:02.237 [http-nio-8080-exec-4] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@9c6f768]
+2025-11-21 11:11:02.237 [http-nio-8080-exec-4] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, userAccount cannot be found in user-center system
+2025-11-21 11:11:02.250 [http-nio-8080-exec-4] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求数据为空]
+2025-11-21 11:13:15.845 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求参数错误]
+2025-11-21 11:13:16.025 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求参数错误]
+2025-11-21 11:13:46.202 [http-nio-8080-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 11:13:46.203 [http-nio-8080-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f63dddc] was not registered for synchronization because synchronization is not active
+2025-11-21 11:13:46.208 [http-nio-8080-exec-9] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@832840768 wrapping com.mysql.cj.jdbc.ConnectionImpl@44a9c83d] will not be managed by Spring
+2025-11-21 11:13:46.209 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 11:13:46.216 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 11:13:46.233 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 2
+2025-11-21 11:13:46.234 [http-nio-8080-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f63dddc]
+2025-11-21 11:13:46.241 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.apache.ibatis.exceptions.TooManyResultsException: Expected one result (or null) to be returned by selectOne(), but found: 2]
+2025-11-21 11:15:10.862 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 11:15:10.863 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d8aba87] was not registered for synchronization because synchronization is not active
+2025-11-21 11:15:10.871 [http-nio-8080-exec-2] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@260413677 wrapping com.mysql.cj.jdbc.ConnectionImpl@44a9c83d] will not be managed by Spring
+2025-11-21 11:15:10.871 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 11:15:10.872 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 11:15:10.878 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 11:15:10.879 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d8aba87]
+2025-11-21 11:15:10.879 [http-nio-8080-exec-2] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, password not match for userAccount: admin
+2025-11-21 11:15:10.894 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求参数错误]
+2025-11-21 11:15:32.973 [http-nio-8080-exec-3] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 11:15:32.975 [http-nio-8080-exec-3] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@79b24080] was not registered for synchronization because synchronization is not active
+2025-11-21 11:15:32.980 [http-nio-8080-exec-3] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1018216914 wrapping com.mysql.cj.jdbc.ConnectionImpl@44a9c83d] will not be managed by Spring
+2025-11-21 11:15:32.980 [http-nio-8080-exec-3] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 11:15:32.981 [http-nio-8080-exec-3] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 11:15:32.995 [http-nio-8080-exec-3] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 11:15:32.998 [http-nio-8080-exec-3] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@79b24080]
+2025-11-21 11:15:32.998 [http-nio-8080-exec-3] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, password not match for userAccount: admin
+2025-11-21 11:15:33.007 [http-nio-8080-exec-3] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求参数错误]
+2025-11-21 11:17:33.119 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 11:17:33.121 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25c1040c] was not registered for synchronization because synchronization is not active
+2025-11-21 11:17:33.127 [http-nio-8080-exec-5] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1782310143 wrapping com.mysql.cj.jdbc.ConnectionImpl@44a9c83d] will not be managed by Spring
+2025-11-21 11:17:33.129 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 11:17:33.131 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 11:17:33.143 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 11:17:33.144 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@25c1040c]
+2025-11-21 11:17:33.144 [http-nio-8080-exec-5] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, password not match for userAccount: admin
+2025-11-21 11:17:33.151 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求参数错误]
+2025-11-21 11:18:18.280 [http-nio-8080-exec-7] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求参数错误]
+2025-11-21 11:18:34.013 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求参数错误]
+2025-11-21 11:48:44.722 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=22m14s261ms).
+2025-11-21 12:38:12.191 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=44m57s424ms).
+2025-11-21 13:14:08.620 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=35m56s430ms).
+2025-11-21 13:33:17.447 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=19m8s827ms).
+2025-11-21 14:04:06.528 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=30m49s78ms).
+2025-11-21 14:13:56.805 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m50s280ms).
+2025-11-21 14:37:07.935 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m40s950ms).
+2025-11-21 14:56:07.341 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m59s282ms).
+2025-11-21 15:16:54.073 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=20m46s732ms).
+2025-11-21 15:24:25.797 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-21 15:24:27.827 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-21 15:24:27.928 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-21 15:24:27.956 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-21 15:24:32.062 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Starting UserCenterApplication using Java 17.0.17 with PID 54273 (/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes started by tears in /Users/tears/IdeaProjects/UserSystem)
+2025-11-21 15:24:32.064 [restartedMain] DEBUG com.tears.usercenter.UserCenterApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-11-21 15:24:32.068 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 15:24:32.171 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-21 15:24:32.172 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-21 15:24:33.277 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-21 15:24:33.280 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-21 15:24:33.353 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 0 Redis repository interfaces.
+2025-11-21 15:24:33.585 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes/com/tears/usercenter/mapper/UserMapper.class]
+2025-11-21 15:24:33.593 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'com.tears.usercenter.mapper.UserMapper' mapperInterface
+2025-11-21 15:24:34.219 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-21 15:24:34.228 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-21 15:24:34.229 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-21 15:24:34.230 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-11-21 15:24:34.290 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-21 15:24:34.292 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2117 ms
+2025-11-21 15:24:39.896 [restartedMain] WARN  com.baomidou.mybatisplus.core.toolkit.Sequence - Initialization Sequence Very Slow! Get datacenterId:2 workerId:29
+2025-11-21 15:24:40.958 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-21 15:24:40.991 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-21 15:24:41.003 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-21 15:24:41.018 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Started UserCenterApplication in 9.931 seconds (process running for 10.608)
+2025-11-21 15:24:49.018 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-21 15:24:49.019 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-21 15:24:49.023 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2025-11-21 15:24:49.175 [http-nio-8080-exec-2] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求参数错误]
+2025-11-21 16:29:11.805 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 16:29:11.810 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71284b92] was not registered for synchronization because synchronization is not active
+2025-11-21 16:29:11.864 [http-nio-8080-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2025-11-21 16:29:12.276 [http-nio-8080-exec-5] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2d9485ec
+2025-11-21 16:29:12.277 [http-nio-8080-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2025-11-21 16:29:12.294 [http-nio-8080-exec-5] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@2052034720 wrapping com.mysql.cj.jdbc.ConnectionImpl@2d9485ec] will not be managed by Spring
+2025-11-21 16:29:12.310 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 16:29:12.361 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 16:29:12.388 [http-nio-8080-exec-5] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 16:29:12.396 [http-nio-8080-exec-5] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71284b92]
+2025-11-21 16:29:12.401 [http-nio-8080-exec-5] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, password not match for userAccount: admin
+2025-11-21 16:29:12.413 [http-nio-8080-exec-5] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求参数错误]
+2025-11-21 16:29:15.014 [http-nio-8080-exec-6] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 16:29:15.015 [http-nio-8080-exec-6] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@30d44b0d] was not registered for synchronization because synchronization is not active
+2025-11-21 16:29:15.021 [http-nio-8080-exec-6] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1041478503 wrapping com.mysql.cj.jdbc.ConnectionImpl@2d9485ec] will not be managed by Spring
+2025-11-21 16:29:15.021 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 16:29:15.023 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 16:29:15.028 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 16:29:15.028 [http-nio-8080-exec-6] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@30d44b0d]
+2025-11-21 16:29:15.028 [http-nio-8080-exec-6] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, password not match for userAccount: admin
+2025-11-21 16:29:15.037 [http-nio-8080-exec-6] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求参数错误]
+2025-11-21 16:29:44.681 [http-nio-8080-exec-8] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 16:29:44.683 [http-nio-8080-exec-8] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@373e6118] was not registered for synchronization because synchronization is not active
+2025-11-21 16:29:44.686 [http-nio-8080-exec-8] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@972654991 wrapping com.mysql.cj.jdbc.ConnectionImpl@2d9485ec] will not be managed by Spring
+2025-11-21 16:29:44.686 [http-nio-8080-exec-8] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 16:29:44.693 [http-nio-8080-exec-8] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 16:29:44.698 [http-nio-8080-exec-8] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 16:29:44.699 [http-nio-8080-exec-8] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@373e6118]
+2025-11-21 16:29:44.699 [http-nio-8080-exec-8] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, password not match for userAccount: admin
+2025-11-21 16:29:44.707 [http-nio-8080-exec-8] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求参数错误]
+2025-11-21 16:30:12.748 [http-nio-8080-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 16:30:12.749 [http-nio-8080-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f63dddc] was not registered for synchronization because synchronization is not active
+2025-11-21 16:30:12.759 [http-nio-8080-exec-9] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@832840768 wrapping com.mysql.cj.jdbc.ConnectionImpl@2d9485ec] will not be managed by Spring
+2025-11-21 16:30:12.762 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 16:30:12.764 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 16:30:12.769 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 16:30:12.770 [http-nio-8080-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f63dddc]
+2025-11-21 16:30:12.771 [http-nio-8080-exec-9] INFO  com.tears.usercenter.service.impl.UserServiceImpl - user login failed, password not match for userAccount: admin
+2025-11-21 16:30:12.780 [http-nio-8080-exec-9] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.tears.usercenter.exception.BusinessException: 请求参数错误]
+2025-11-21 16:30:58.607 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2025-11-21 16:30:58.640 [Thread-5] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-21 16:30:58.646 [tomcat-shutdown] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-11-21 16:31:00.664 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-21 16:31:00.664 [http-nio-8080-Acceptor] ERROR org.apache.tomcat.util.net.Acceptor - Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:376)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:399)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:518)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:128)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-11-21 16:31:00.671 [Thread-5] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-11-21 16:31:00.715 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-21 16:31:00.738 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-21 16:31:01.032 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Starting UserCenterApplication using Java 17.0.17 with PID 54273 (/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes started by tears in /Users/tears/IdeaProjects/UserSystem)
+2025-11-21 16:31:01.033 [restartedMain] DEBUG com.tears.usercenter.UserCenterApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-11-21 16:31:01.034 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 16:31:01.507 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-21 16:31:01.507 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-21 16:31:01.522 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+2025-11-21 16:31:01.576 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes/com/tears/usercenter/mapper/UserMapper.class]
+2025-11-21 16:31:01.577 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'com.tears.usercenter.mapper.UserMapper' mapperInterface
+2025-11-21 16:31:01.722 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-21 16:31:01.723 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-21 16:31:01.724 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-21 16:31:01.724 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-11-21 16:31:01.738 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-21 16:31:01.739 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 688 ms
+2025-11-21 16:31:06.898 [restartedMain] WARN  com.baomidou.mybatisplus.core.toolkit.Sequence - Initialization Sequence Very Slow! Get datacenterId:2 workerId:29
+2025-11-21 16:31:07.250 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-21 16:31:07.263 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-21 16:31:07.266 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-21 16:31:07.279 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Started UserCenterApplication in 6.429 seconds (process running for 2988.669)
+2025-11-21 16:31:07.291 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-21 16:31:08.696 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2025-11-21 16:31:08.711 [Thread-7] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-21 16:31:08.712 [tomcat-shutdown] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-8080"]
+2025-11-21 16:31:10.728 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2025-11-21 16:31:10.731 [Thread-7] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-8080"]
+2025-11-21 16:31:10.730 [http-nio-8080-Acceptor] ERROR org.apache.tomcat.util.net.Acceptor - Socket accept failed
+java.nio.channels.AsynchronousCloseException: null
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:202)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:376)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:399)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:518)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:128)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2025-11-21 16:31:10.966 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Starting UserCenterApplication using Java 17.0.17 with PID 54273 (/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes started by tears in /Users/tears/IdeaProjects/UserSystem)
+2025-11-21 16:31:10.968 [restartedMain] DEBUG com.tears.usercenter.UserCenterApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-11-21 16:31:10.968 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-21 16:31:11.204 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-21 16:31:11.205 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-21 16:31:11.212 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+2025-11-21 16:31:11.249 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes/com/tears/usercenter/mapper/UserMapper.class]
+2025-11-21 16:31:11.250 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'com.tears.usercenter.mapper.UserMapper' mapperInterface
+2025-11-21 16:31:11.366 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-21 16:31:11.369 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-21 16:31:11.369 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-21 16:31:11.369 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-11-21 16:31:11.379 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-21 16:31:11.380 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 402 ms
+2025-11-21 16:31:11.669 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-21 16:31:11.678 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-21 16:31:11.681 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-21 16:31:11.685 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Started UserCenterApplication in 0.846 seconds (process running for 2993.075)
+2025-11-21 16:31:11.689 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2025-11-21 16:31:31.558 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-21 16:31:31.559 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2025-11-21 16:31:31.575 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+2025-11-21 16:31:31.608 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 16:31:31.608 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b24fc28] was not registered for synchronization because synchronization is not active
+2025-11-21 16:31:31.611 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2025-11-21 16:31:31.660 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1d770e32
+2025-11-21 16:31:31.660 [http-nio-8080-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2025-11-21 16:31:31.660 [http-nio-8080-exec-1] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1517249237 wrapping com.mysql.cj.jdbc.ConnectionImpl@1d770e32] will not be managed by Spring
+2025-11-21 16:31:31.660 [http-nio-8080-exec-1] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 16:31:31.662 [http-nio-8080-exec-1] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 16:31:31.665 [http-nio-8080-exec-1] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 16:31:31.665 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6b24fc28]
+2025-11-21 16:31:31.709 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 16:31:31.710 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@571ef0d1] was not registered for synchronization because synchronization is not active
+2025-11-21 16:31:31.710 [http-nio-8080-exec-2] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@648521072 wrapping com.mysql.cj.jdbc.ConnectionImpl@1d770e32] will not be managed by Spring
+2025-11-21 16:31:31.710 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE id=? AND isDelete=0
+2025-11-21 16:31:31.710 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - ==> Parameters: 1(Long)
+2025-11-21 16:31:31.712 [http-nio-8080-exec-2] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - <==      Total: 1
+2025-11-21 16:31:31.713 [http-nio-8080-exec-2] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@571ef0d1]
+2025-11-21 16:31:39.686 [http-nio-8080-exec-3] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 16:31:39.686 [http-nio-8080-exec-3] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76819855] was not registered for synchronization because synchronization is not active
+2025-11-21 16:31:39.691 [http-nio-8080-exec-3] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1572222780 wrapping com.mysql.cj.jdbc.ConnectionImpl@1d770e32] will not be managed by Spring
+2025-11-21 16:31:39.692 [http-nio-8080-exec-3] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0
+2025-11-21 16:31:39.693 [http-nio-8080-exec-3] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 
+2025-11-21 16:31:39.704 [http-nio-8080-exec-3] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 9
+2025-11-21 16:31:39.706 [http-nio-8080-exec-3] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@76819855]
+2025-11-21 16:52:41.346 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=8m39s464ms).
+2025-11-21 17:05:58.123 [http-nio-8080-exec-6] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 17:05:58.126 [http-nio-8080-exec-6] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d3ca404] was not registered for synchronization because synchronization is not active
+2025-11-21 17:05:58.136 [http-nio-8080-exec-6] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1140544467 wrapping com.mysql.cj.jdbc.ConnectionImpl@1d770e32] will not be managed by Spring
+2025-11-21 17:05:58.137 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 17:05:58.138 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 17:05:58.153 [http-nio-8080-exec-6] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 17:05:58.154 [http-nio-8080-exec-6] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4d3ca404]
+2025-11-21 17:05:58.164 [http-nio-8080-exec-7] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 17:05:58.165 [http-nio-8080-exec-7] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@30895be] was not registered for synchronization because synchronization is not active
+2025-11-21 17:05:58.165 [http-nio-8080-exec-7] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@231697327 wrapping com.mysql.cj.jdbc.ConnectionImpl@1d770e32] will not be managed by Spring
+2025-11-21 17:05:58.165 [http-nio-8080-exec-7] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE id=? AND isDelete=0
+2025-11-21 17:05:58.165 [http-nio-8080-exec-7] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - ==> Parameters: 1(Long)
+2025-11-21 17:05:58.167 [http-nio-8080-exec-7] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - <==      Total: 1
+2025-11-21 17:05:58.167 [http-nio-8080-exec-7] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@30895be]
+2025-11-21 17:08:26.881 [http-nio-8080-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 17:08:26.889 [http-nio-8080-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1182f6b1] was not registered for synchronization because synchronization is not active
+2025-11-21 17:08:26.898 [http-nio-8080-exec-9] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@524618481 wrapping com.mysql.cj.jdbc.ConnectionImpl@1d770e32] will not be managed by Spring
+2025-11-21 17:08:26.899 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0 AND (userAccount = ?)
+2025-11-21 17:08:26.900 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: admin(String)
+2025-11-21 17:08:26.905 [http-nio-8080-exec-9] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 1
+2025-11-21 17:08:26.908 [http-nio-8080-exec-9] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1182f6b1]
+2025-11-21 17:08:26.918 [http-nio-8080-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 17:08:26.918 [http-nio-8080-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@661c94b5] was not registered for synchronization because synchronization is not active
+2025-11-21 17:08:26.918 [http-nio-8080-exec-10] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1759213062 wrapping com.mysql.cj.jdbc.ConnectionImpl@1d770e32] will not be managed by Spring
+2025-11-21 17:08:26.918 [http-nio-8080-exec-10] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE id=? AND isDelete=0
+2025-11-21 17:08:26.919 [http-nio-8080-exec-10] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - ==> Parameters: 1(Long)
+2025-11-21 17:08:26.922 [http-nio-8080-exec-10] DEBUG com.tears.usercenter.mapper.UserMapper.selectById - <==      Total: 1
+2025-11-21 17:08:26.922 [http-nio-8080-exec-10] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@661c94b5]
+2025-11-21 17:08:30.653 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Creating a new SqlSession
+2025-11-21 17:08:30.655 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b6bc991] was not registered for synchronization because synchronization is not active
+2025-11-21 17:08:30.658 [http-nio-8080-exec-1] DEBUG o.m.spring.transaction.SpringManagedTransaction - JDBC Connection [HikariProxyConnection@1909576527 wrapping com.mysql.cj.jdbc.ConnectionImpl@1d770e32] will not be managed by Spring
+2025-11-21 17:08:30.662 [http-nio-8080-exec-1] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==>  Preparing: SELECT id,username,userAccount,avatarUrl,gender,userPassword,phone,email,userStatus,createTime,updateTime,isDelete,userRole FROM user WHERE isDelete=0
+2025-11-21 17:08:30.663 [http-nio-8080-exec-1] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - ==> Parameters: 
+2025-11-21 17:08:30.686 [http-nio-8080-exec-1] DEBUG com.tears.usercenter.mapper.UserMapper.selectList - <==      Total: 9
+2025-11-21 17:08:30.687 [http-nio-8080-exec-1] DEBUG org.mybatis.spring.SqlSessionUtils - Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b6bc991]
+2025-11-21 17:46:39.432 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=18m27s792ms).
+2025-11-21 18:20:06.849 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=33m27s418ms).
+2025-11-21 18:21:17.465 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=1m10s614ms).
+2025-11-21 18:26:05.835 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=4m48s372ms).
+2025-11-21 18:29:58.512 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=3m52s678ms).
+2025-11-21 19:23:28.765 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=53m30s252ms).
+2025-11-21 20:23:04.934 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=59m36s170ms).
+2025-11-21 21:20:57.800 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=57m52s866ms).
+2025-11-21 22:20:56.925 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=59m59s124ms).
+2025-11-21 22:49:12.594 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=28m15s670ms).
+2025-11-21 23:06:44.577 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=17m31s982ms).
+2025-11-21 23:08:04.275 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=1m19s699ms).
+2025-11-21 23:26:19.640 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=18m15s365ms).
+2025-11-21 23:28:29.035 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=2m9s395ms).
+2025-11-21 23:47:25.486 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=18m56s451ms).
+2025-11-21 23:49:34.920 [HikariPool-2 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Thread starvation or clock leap detected (housekeeper delta=2m9s434ms).

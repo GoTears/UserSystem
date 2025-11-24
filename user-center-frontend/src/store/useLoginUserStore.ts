@@ -31,4 +31,16 @@ export const useLoginUserStore = defineStore("loginUser", () => {
   }
 
   return { loginUser, setLoginUser, fetchLoginUser, resetLoginUser };
-});
+},
+
+{
+  //持久化
+  persist: [
+    {
+      key: "loginUser",
+      storage: localStorage, // 或 sessionStorage
+      // paths: ["loginUser"],   // 指定持久化字段
+    },
+  ],
+  },
+);

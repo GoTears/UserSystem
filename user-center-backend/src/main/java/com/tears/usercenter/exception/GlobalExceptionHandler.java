@@ -14,11 +14,11 @@ public class GlobalExceptionHandler {
 
     private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(GlobalExceptionHandler.class);
 
-    //针对什么异常做什么处理
+    //什么异常做什么处理
     @ExceptionHandler(BusinessException.class)
     public BaseResponse businessExceptionHandler(BusinessException e){
-        log.error("BusinessException - Code: {}, Message: {}, Description: {}, StackTrace: {}", 
-            e.getCode(), e.getMessage(), e.getDescription(), e.getStackTrace());
+        log.error("BusinessException - Code: {}, Message: {}, Description: {}",
+            e.getCode(), e.getMessage(), e.getDescription(), e);
         return ResultUtils.error(e.getCode(), e.getMessage(), e.getDescription());
     }
 

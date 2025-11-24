@@ -29,7 +29,7 @@
         name="userPassword"
         :rules="[
           { required: true, message: '请输入密码' },
-          { min: 8, message: '密码不能小于 8 位' }
+          // { min: 8, message: '密码不能小于 8 位' }
         ]"
       >
         <a-input-password
@@ -50,48 +50,91 @@
 import { reactive } from "vue";
 import { useRouter } from "vue-router";
 import { message } from "ant-design-vue";
+import type { AxiosError } from "axios";
+
 
 import { userLogin } from "@/api/user";
 import { useLoginUserStore } from "@/store/useLoginUserStore";
 
-// 定义表单状态类型
 interface FormState {
   userAccount: string;
   userPassword: string;
 }
 
-// 初始化表单状态
 const formState = reactive<FormState>({
   userAccount: "",
   userPassword: "",
 });
 
-// 获取路由和全局登录用户状态
 const router = useRouter();
 const loginUserStore = useLoginUserStore();
 
 /**
- * 提交表单
- * @param values 表单值
+ * 判断是否属于登录错误（统一提示"账号或密码错误"）
  */
+const isLoginError = (msg: string = ""): boolean => {
+  const keywords = [
+    "用户不存在",
+    "密码错误",
+    "请求数据为空",
+    "账号或密码为空",
+    "用户账号过短",
+    "用户密码过短",
+    "请求参数错误",
+  ];
+  return keywords.some((k) => msg.includes(k));
+};
+
 const handleSubmit = async (values: FormState) => {
   try {
     const res = await userLogin(values);
 
+    // ---- ① 登录成功 ----
     if (res.data.code === 0 && res.data.data) {
-      // 登录成功，刷新全局用户状态
       await loginUserStore.fetchLoginUser();
       message.success("登录成功");
-
-      // 跳转首页
       router.replace("/");
-    } else {
-      message.error(res.data.message || "登录失败");
+      return;
     }
-  } catch (error) {
-    message.error("网络或服务器错误，请稍后重试");
-    console.error(error);
+
+    // ---- ② 登录失败（后端返回错误码）----
+    const backendMsg = res.data.message || res.data.description || "登录失败";
+
+    if (isLoginError(backendMsg)) {
+      message.error("账号或密码错误");
+    } else {
+      message.error(backendMsg);
+    }
   }
+  catch (error) {
+    const err = error as AxiosError<{ message?: string }>;
+
+    const backendMsg =
+      err.response?.data?.message || "网络错误，请稍后重试";
+
+    const finalMsg = isLoginError(backendMsg)
+      ? "账号或密码错误"
+      : backendMsg;
+
+    message.error(finalMsg);
+    console.error(err);
+  }
+  // catch (error: unknown) {
+  //   // ---- ③ Axios 错误 ----
+  //   const axiosError = error as AxiosError;
+
+  //   let backendMsg =
+  //   (axiosError.response?.data as any)?.message ||
+  //   "网络错误，请稍后重试";
+
+
+  //   if (isLoginError(backendMsg)) {
+  //     backendMsg = "账号或密码错误";
+  //   }
+
+  //   message.error(backendMsg);
+  //   console.error(error);
+  // }
 };
 </script>
 

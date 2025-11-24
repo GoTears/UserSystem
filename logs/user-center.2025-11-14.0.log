@@ -1,0 +1,23 @@
+2025-11-14 15:38:37.914 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Starting UserCenterApplication using Java 17.0.17 with PID 43855 (/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes started by tears in /Users/tears/IdeaProjects/UserSystem)
+2025-11-14 15:38:37.917 [restartedMain] DEBUG com.tears.usercenter.UserCenterApplication - Running with Spring Boot v3.4.4, Spring v6.2.5
+2025-11-14 15:38:37.922 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - No active profile set, falling back to 1 default profile: "default"
+2025-11-14 15:38:38.023 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-14 15:38:38.026 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-14 15:38:39.086 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2025-11-14 15:38:39.089 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2025-11-14 15:38:39.150 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 0 Redis repository interfaces.
+2025-11-14 15:38:39.401 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Identified candidate component class: file [/Users/tears/IdeaProjects/UserSystem/user-center-backend/target/classes/com/tears/usercenter/mapper/UserMapper.class]
+2025-11-14 15:38:39.403 [restartedMain] DEBUG org.mybatis.spring.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'com.tears.usercenter.mapper.UserMapper' mapperInterface
+2025-11-14 15:38:39.993 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-11-14 15:38:40.002 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2025-11-14 15:38:40.003 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2025-11-14 15:38:40.003 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.39]
+2025-11-14 15:38:40.055 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-11-14 15:38:40.059 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2029 ms
+2025-11-14 15:38:45.633 [restartedMain] WARN  com.baomidou.mybatisplus.core.toolkit.Sequence - Initialization Sequence Very Slow! Get datacenterId:2 workerId:7
+2025-11-14 15:38:46.805 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2025-11-14 15:38:46.844 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2025-11-14 15:38:46.855 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2025-11-14 15:38:46.871 [restartedMain] INFO  com.tears.usercenter.UserCenterApplication - Started UserCenterApplication in 9.804 seconds (process running for 10.403)
+2025-11-14 15:38:51.770 [SpringApplicationShutdownHook] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-14 15:38:53.787 [tomcat-shutdown] INFO  o.s.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
